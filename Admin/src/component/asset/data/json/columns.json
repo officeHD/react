@@ -1,0 +1,14 @@
+
+{
+  "staffpage":[
+    {"title": "条线","dataIndex": "lineType","key": "lineType", },
+    {"title": "分公司","dataIndex": "branchCompanyName","key": "branchCompanyName"},
+    {"title": " 督训区","dataIndex": "countyFranchiseesName","key": "countyFranchiseesName"},
+    {"title": " 分部","dataIndex": "storeName","key": "storeName"},
+    {"title": " 姓名","dataIndex": "name","key": "name"},
+    {"title": " 职级","dataIndex": "position","key": "position"},
+    {"title": " 手机号码 ","dataIndex": "phoneNum","key": "phoneNum"},
+    {"title": "岗位号", "dataIndex": "workNum", "key": "workNum"},
+    {"title": "入职日期", "dataIndex": "entryDate", "key": "entryDate"}
+  ]
+}

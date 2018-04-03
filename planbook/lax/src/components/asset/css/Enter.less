@@ -1,0 +1,159 @@
+@import "./zlib.v3.less";
+
+.banner {
+    .w100;
+    vertical-align: bottom;
+    margin-top: 90px;
+}
+
+.index_desk {
+    .p-r;
+    top: -20px;
+    font-size: 28px;
+    width: 90%;
+    background-color: #fff;
+    border-radius: 20px;
+    margin: 0 auto 60px;
+    box-shadow: 1px 4px 8px #768c99; 
+
+    .index_ul {
+        padding: 20px 0; 
+        .li {
+            border-bottom: @border;
+            background-color: #fff;
+            height: 100px;
+            padding: 0 20px;
+            .clearfix;
+
+            .item_name {
+                margin-right: 30px;
+                line-height: 100px;
+            }
+
+            .selections {
+                .f-r;
+                line-height: 100px;
+                label {
+                    .inline;
+                    padding-left: 50px;
+                    margin-left: 40px;
+                    background-image: url("@{img}/radio_off.png") ;
+                    background-position: left center;
+                    background-repeat: no-repeat;
+                    background-size: auto 40%;
+
+                    &.selected {
+                        background-image: url("@{img}/radio_on.png");
+                        
+                    }
+                }
+            }
+
+            .info_input {
+                height: 100%;
+                line-height: 100px;
+                border: 0;
+                width: 300px;
+
+                &.car_num {
+                    width: 140px;
+                }
+            }
+
+            .select_province {
+                .t-c;
+                .bold;
+                width: 50px;
+                padding-right: 40px;
+                margin-left: 6px;
+                background: url("@{img}/down.png") no-repeat right center;
+                background-size: auto 100%;
+                border: 0;
+            }
+
+        }
+    }
+
+    .new_car {
+        .one-height(100px);
+        .f-r;
+        span {
+            padding: 0 0 0 40px;
+            background: url("@{img}/new_car.png") no-repeat left center;
+            background-size: auto 100%;
+
+        }
+    }
+
+}
+.select_toubao {
+    .t-r;
+    max-width: 160px;
+    height: 80px;
+    border: 0;
+    padding: 0;
+    margin: 0 6px 0 0;
+}
+.recent {
+    color: @ms-red;
+    .f-r;
+    margin: 0 20px;
+}
+
+.remaining {
+    margin-left: 20px;
+    color: @orange;
+}
+
+//选择省份的组件
+.province_selector {
+    font-size: 28px;
+    .p-f;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    background-color: rgba(0,0,0,0.5);
+
+    .box {
+        .size(400px, 510px);
+        background-color: #fff;
+        .p-f;
+        top: 50%;
+        left: 50%;
+        margin: -300px auto auto -200px;
+        border-radius: 20px;
+        .o-h;
+
+        .selected_div {
+            .size(300px, 80px);
+            .p-a;
+            border-top: 2px solid @ms-red;
+            border-bottom: 2px solid @ms-red;
+            margin: 140px 0  0 50px;
+        }
+
+        ul {
+            .p-a;
+            .w100;
+            .clearfix;
+            li {
+                .t-c;
+                color: #999;
+                font-size: 32px;
+                width: 20%;
+                .f-l;
+                padding: 12px 0;
+
+
+                &.selected {
+                    color: @ms-red;
+                    .bold;
+
+                }
+
+            }
+        }
+    }
+}

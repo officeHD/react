@@ -1,0 +1,114 @@
+{
+    "TradeData":
+    {
+        "BaseInfo":
+        {
+            "TradeCode": "ContConfirm", //接口编码
+            "RequestDate": "2017-10-11" //请求时间
+        },
+        "ContInfo":
+        {
+            "LCCont": //报文任务保单基本信息
+            {
+                "OldAppointMentNo": "KM220000000000000507", //原订单号
+                "AppointMentNo": "KM220000000000000507", //订单号
+                "CompanyFlag": "LIS", //主体公司标示
+                "PolApplyDate": "2017-10-11", //投保单投保日期
+                "Operator": "00000017", //操作员
+                "GetPolMode": "2", //保单接收方式
+                "SellType": "11", //渠道销售方式(11-网销)
+                "SaleChnl": "7", //销售渠道7-网销
+                "BusinessChnl": "02", //九大业务渠道06-移动互联渠道-
+                "ContSource": "4", //保单来源
+                "BizSource": "04", //业务来源
+                "PayIntv": "0" //缴费间隔
+            },
+            "Agents": [ //业务员信息，此处用于支持多业务员情况
+                {
+                    "AgentCount": "1",
+                    "Agent":
+                    {
+                        "AgentCode": "122010210", //业务员编码
+                        "AgentName": "Öì½¨±ø", //业务员姓名
+                        "AgentCom": "134008" //业务员银行代理机构
+                    }
+                }
+            ],
+            "LCAppnt":
+            {
+                "AppntName": "ÉÙ¶ùÁ½È«13", //投保人姓名
+                "AppntSex": "0", //投保人性别
+                "AppntBirthday": "1990-01-01", //投保人生日
+                "AppntIDType": "8", //投保人证件类型
+                "AppntIDNo": "110229199001010236", //投保人证件号码
+                "IDTypeStartDate": "2010-05-31", //投保人证件有效起期
+                "IDTypeEndDate": "9999-12-30", //投保人证件有效起期
+                "Marriage": "0", //投保人婚姻状况
+                "NativePlace": "CHN", //投保人国籍
+                "OccupationType": "1", //投保人职业类别
+                "OccupationCode": "1010101", //投保人职业代码
+                "LCAddress":
+                {
+                    "Province": "510000", //联系地址(省)
+                    "City": "510100", //联系地址(省)
+                    "County": "510104", //联系地址(省)
+                    "PostalAddress": "ºÚÁú½­Ê¡ÒÀ°²ÊÐºÍÆ½Çø»¨Ô°Ð¡Çø4-4-21I", //联系地址 
+                    "ZipCode": "610000", //联系地址邮政编码
+                    "Mobile": "15223055232", //联系地址邮政编码
+                    "AppntReturnCall": "3", //回访电话 1：住宅电话 2：办公电话3：移动电话
+                    "Email": "15226655232@163.com", //电子邮箱
+                    "HomeProvince": "510000", //联系地址
+                    "HomeCity": "510100", //联系地址
+                    "HomeCounty": "510104", //联系地址
+                    "PostalAddress1": "ºÚÁú½­Ê¡ÒÀ°²ÊÐºÍÆ½Çø»¨Ô°Ð¡Çø4-4-21I", //联系地址
+                    "CompanyAreaCode": "020",
+                    "CompanyPhone": "85361442",
+                    "HomeAreaCode": "020",
+                    "HomePhone": "85361442",
+                    "Phone": "85361442"
+                },
+                "LCAppntImparts": [
+                {
+                    "LCAppntImpartCount": "0"
+                }]
+            },
+            "LCInsureds": [
+            {
+                "LCInsuredCount": "1", //被保人数目
+                "LCInsured":
+                {
+                    "Name": "ÉÙ¶ùÁ½È«5", //被保人姓名
+                    "Sex": "0", //被保人性别
+                    "Birthday": "2017-01-01", //被保人生日
+                    "IDType": "4", //被保人证件类型
+                    "IDNo": "110229201701010539", //被保人证件号码
+                    "Marriage": "0", //被保人婚姻状况
+                    "NativePlace": "CHN", //被保人国籍
+                    "OccupationType": "1", //被保人职业类别
+                    "OccupationCode": "1010101", //被保人职业类别
+                    "SequenceNo": "0", //被保人序号
+                    "RelationToMainInsured": "01", //与主被保人关系
+                    "RelationToAppnt": "03", //与投保人关系
+                    "LCAddress": //
+                    {
+                        "Province": "510000", //联系地址(省)
+                        "City": "510100", //联系地址(省)
+                        "County": "510104", //联系地址(省)
+                        "PostalAddress": "ºÚÁú½­Ê¡ÒÀ°²ÊÐºÍÆ½Çø»¨Ô°Ð¡Çø4-4-21I", //联系地址(省)
+                        "ZipCode": "610000", //联系邮政编码
+                        "Mobile": "15203655232", //移动电话
+                        "Email": "15226655232@163.com" //电子邮箱
+                    },
+                    "LCInsureImparts": [
+                    {
+                        "LCInsureImpartCount": "0" //被保人告知数目，如果无告知内容，需要置“0
+                    }]
+                }
+            }],
+            "LCBnfs": [
+            {
+                "LCBnfCount": "0" //受益人数目，如果受益人，需要置“0”
+            }]
+        }
+    }
+}

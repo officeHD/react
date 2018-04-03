@@ -1,0 +1,117 @@
+@cyan: #12b5b0;
+
+@import "./zlib.v3.less";
+
+//报价结果组件
+.result {
+    margin-top: 110px;
+    margin-bottom: 100px;
+    li {
+        margin-top: 20px;
+        background-color: #fff;
+        border-bottom: @border;
+        border-top: @border;
+        padding: 40px 20px 0;
+        font-size: 24px;
+        margin-bottom: 100px;
+    }
+}
+.total_table {
+    .w100;
+    
+    td {
+        &.no_wrap {
+            white-space:nowrap;
+            
+        }
+        img {
+            width: 80px;
+        }
+
+    } 
+}
+.money_tr {
+    td {
+        padding: 20px 0;
+    }
+}
+
+.company_name {
+    font-size: 36px;
+
+}
+.company_detail {
+    color: #999;
+}
+.sum_td {
+    font-size: 32px;
+    .t-r;
+    color: @cyan;
+    span {
+        font-size: 40px;
+    }
+}
+.cyan {
+    color: @cyan;
+}
+
+.btn_div {
+    .t-c;
+    button {
+        background-color: @orange;
+        color: #fff;
+        margin: 20px auto 60px;
+        border: 0;
+        padding: 20px 30px;
+        font-size: 30px;
+    }
+}
+
+.detail_tables {
+    table {
+        .w100;
+        border-top: 2px dashed #ccc;
+        font-size: 24px;
+        margin-bottom: 40px;
+        th {
+            .t-c;
+            .bold;
+            background: #f2f2f2;
+        }
+
+        td {
+            padding: 10px 0;
+            .t-c;
+            white-space:nowrap;
+            border-bottom: @border;
+
+            &:first-child {
+                .t-l;
+            }
+
+            &:last-child {
+                .t-r;
+            }
+        }
+    }
+}
+
+.handler {
+    .p-a;
+    height: 80px;
+    width: 30%;
+    right: 20px;
+    margin: -1PX auto 0;
+    border-left: @border;
+    border-right: @border;
+    border-bottom: @border;
+    background-color: #fff;
+    background-image: url('@{img}/down_arrow.png');
+    background-size: auto 40%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.toHide {
+    .handler;
+    background-image: url('@{img}/up_arrow.png');
+}

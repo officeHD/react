@@ -1,0 +1,292 @@
+/**
+ * 文件：CIF计划书
+ * 作者：无名大强
+ * 版本：v0.1
+ * 版权：民盛集团
+ * 日期：2017-3-9
+**/
+
+@import "./zlib.v2.less";
+@import "./init.less";
+@images: "../img";
+
+body {
+    background-color: #daecf1;
+    .size(100%, 100%);
+    font-size: 28px;
+}
+
+.hide {
+    .hide;
+}
+
+//标题栏组件
+.title_bar {
+    .w100;
+    .p-f;
+    top: 0;
+    height: 90px;
+    background-color: #fff;
+    border-bottom: @border;
+    .t-c;
+
+    button {
+        .p-a;
+        left: 20px;
+        .square(50px);
+        top: 50%;
+        margin-top: -25px;
+        border: 0;
+        background: url("@{images}/back.png");
+        background-color: #fff;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+
+        &.others {
+            right: 20px;
+            left: auto;
+        }
+    }
+
+    h1 {
+        .w100;
+        height: 100%;
+        line-height: 90px;
+        .t-c;
+        font-size: 40px;
+    }
+}
+
+.line_bar {
+    height: 90px;
+    width: 100%;
+}
+
+.banner {
+   
+    .block;
+}
+
+.item_title {
+    height: 60px;
+
+    img {
+        height: 100%;
+        width: auto;
+        vertical-align: middle;
+    }
+}
+
+//同被保人
+.asInsured {
+    .f-r;
+    margin: -48px 20px 0 0;
+    padding-left: 54px;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-image: url("@{images}/checkbox_off.png");
+
+    &.selected {
+        background-image: url("@{images}/checkbox_on.png");
+    }
+}
+
+.blank_ul {
+    background-color: #fff;
+    border-top: @border;
+    margin-bottom: 40px;
+
+    li {
+        border-bottom: @border;
+        height: 100px;
+        line-height: 100px;
+        padding: 0 20px;
+
+        label {
+            display: inline-block;
+            min-width: 120px;
+            margin-right: 40px;
+        }
+
+
+
+
+        .grey {
+            color: #a0a0a0;
+        }
+
+        .small {
+            font-size: 24px;
+        }
+    }
+}
+
+input {
+    border: 0;
+    font-size: 30px;
+}
+
+img {
+
+    &.right_arrow {
+        .f-r;
+        width: 30px;
+        margin-top: 28px;
+    }
+}
+
+//单选选择器组件
+.radio_selector {
+    font-size: 28px;
+    .inline;
+    .clearfix;
+    height: 95%;
+    vertical-align: top;
+
+    span {
+        .o-h;
+        .inline;
+        margin-right: 40px;
+
+        img {
+            .square(40px);
+            vertical-align: middle;
+            margin-right: 20px;
+        }
+    }
+}
+
+//遮罩层样式
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.5);
+    img {
+        position: fixed;
+        width: 25%;
+        top: 50%;
+        left: 50%;
+        margin: -12.5% 0 0 -12.5%;
+    }
+}
+
+//选择职业类别插件
+.occupation {
+    .p-f;
+    height: 800px;
+    width: 80%;
+    top: 10%;
+    left: 10%;
+    background-color: #fff;
+    .radius;
+    .o-h;
+    border: @border;
+    z-index: 101;
+
+    .o_head {
+        .w100;
+        .p-r;
+        height: 60px;
+        line-height: 60px;
+        font-size: 34px;
+        .t-c;
+        border-bottom: @border;
+
+        span {
+            .p-a;
+            top: 0;
+            right: 0;
+            padding: 0 20px;
+        }
+    }
+
+    .o_body {
+        .w100;
+        height: 720px;
+        overflow-y: scroll;
+
+        p {
+            font-size: 20px;
+            line-height: 30px;
+            color: #aaa;
+            padding-right: 20px;
+        }
+    }
+
+    ol {
+        list-style-type: decimal;
+        margin-left: 60px;
+
+        li {
+            padding: 10px 0;
+        }
+    }
+}
+
+//生成计划书演示按钮
+.generateBtn {
+    background-color: @ms-red;
+    color: #fff;
+    font-size: 32px;
+    width: 80%;
+    margin: 0 0 100px 10%;
+    padding: 16px 0;
+    border: 0;
+    border-radius: 10px;
+}
+
+//选择框
+.selector {
+    font-size: 28px;
+    .p-f;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 101;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    ul {
+        width: 400px;
+        background-color: #fff;
+        .p-a;
+        top: 50%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        border-radius: 20px;
+        -ms-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%);
+        .o-h;
+        border: 0;
+
+        li {
+            .one-height(100px);
+            text-indent: 40px;
+            .clearfix;
+            border-bottom: 1px solid #ccc;
+            padding-left: 40px;
+            .o-h;
+
+            &:last-child {
+                border-bottom: 0;
+            }
+
+            img {
+                .square(40px);
+                margin-top: 30px;
+                margin-right: 40px;
+                .inline;
+                .f-r;
+            }
+        }
+    }
+}

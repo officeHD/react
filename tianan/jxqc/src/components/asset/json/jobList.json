@@ -1,0 +1,13 @@
+ [
+ {
+     "id": "2210",
+     "small_job_classify": "简单体力劳动人员",
+     "middle_job_classify_id": "62",
+     "job_code": "6270401",
+     "job_type": "4",
+     "middle_job_classify": "其他生产运输设备操作人员及有关人员",
+     "big_job_classify": "生产、运输设备操作人员",
+     "big_job_classify_id": "6",
+     "job": "简单体力劳动人员",
+     "small_job_classify_id": "333"
+ }]

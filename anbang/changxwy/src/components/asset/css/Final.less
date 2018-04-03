@@ -1,0 +1,65 @@
+@import "./zlib.v3.less";
+
+//订单结果组件
+.final {
+    font-size: 28px;
+    margin-top: 90px;
+
+    iframe {
+        .w100;
+        height: 70px;
+        border: 0;
+    }
+
+    p {
+        .t-c;
+    }
+
+    .t-c;
+
+    button {
+        width: 40%;
+        padding: 10px 0;
+        margin: 80px 5%;
+        background-color: @orange;
+        color: #fff;
+        border: 0;
+        font-size: 36px;
+        .bold;
+        border-radius: 10px;
+
+        &:last-child {
+            background-color: @blue;
+        }
+    }
+}
+
+.bg {
+    width: 100%;
+    height: 500px;
+    background-image: url("@{img}/bg_final.png") ;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: left top;
+}
+
+.success {
+    .t-c;
+    .p-f;
+    top: 120px;
+    .w100;
+    font-size: 36px;
+    padding-top: 20px;
+
+    .red {
+        color: @ms-red;
+    }
+
+    p {
+        &:first-child {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+    }
+    
+}

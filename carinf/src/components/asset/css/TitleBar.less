@@ -1,0 +1,53 @@
+@import "./zlib.v3.less";
+
+.title_bar {
+
+    .w100;
+    .p-f;
+    top: 0;
+    height: 90px;
+    background-color: #fff;
+    border-bottom: @border;
+    z-index: 999; // button {
+    //     .p-a;
+    //     left: 20px;
+    //     .square(50px);
+    //     top: 50%;
+    //     margin-top: -25px;
+    //     border: 0;
+    //     background: url("@{img}/back.png"); 
+    //     background-color: #fff;
+    //     background-size: 100% 100%;
+    //     background-repeat: no-repeat;
+    //     &.others {
+    //         right: 20px;
+    //         left: auto;
+    //         background-image: url("@{img}/others.png");
+    //     }
+    // }
+    h1 {
+        width: 60%;
+        margin: 0 auto;
+        height: 100%;
+        line-height: 90px;
+        font-weight: 500;
+        .t-c;
+        font-size: 40px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}
+
+.line_bar {
+    height: 90px;
+    width: 100%;
+}
+
+.goBack {
+    .p-a;
+    left: 20px;
+    .square(50px);
+    top: 50%;
+    margin-top: -25px;
+}

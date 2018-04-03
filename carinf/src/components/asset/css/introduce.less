@@ -1,0 +1,295 @@
+@import "./zlib.v3.less";
+.documents {
+    .definition;
+
+    p {
+        font-size: 24px;
+        color: #999;
+        margin-top: 20px;
+    }
+
+    li {
+        border-bottom: @border;
+        font-size: 32px;
+        padding: 20px 0;
+
+        a {
+            color: @ms-red;
+        }
+    }
+}
+
+.footer {
+    text-align: center;
+    color: #ccc;
+    margin: 15px 0;
+    margin-bottom: 120px;
+    svg {
+        vertical-align: middle;
+        margin: 0 20px;
+    }
+}
+
+.definition {
+    .blank;
+
+    p {
+        line-height: 1.5;
+        height: 210px;
+        overflow: hidden;
+
+        &.all {
+            height: auto;
+        }
+    }
+}
+
+.detail {
+    .blank;
+
+    p {
+        line-height: 1.5;
+        height: 170px;
+        overflow: hidden;
+
+        &.all {
+            height: auto;
+        }
+    }
+}
+
+.payment {
+    .blank;
+
+    li {
+        .clearfix;
+        margin-bottom: 20px;
+        position: relative;
+
+        &>div {
+            float: left;
+            margin-left: 80px;
+            font-size: 40px;
+            vertical-align: middle;
+        }
+    }
+
+    .num {
+        position: absolute;
+        top: 5px;
+        left: 0;
+        display: inline-block;
+        float: left;
+        text-align: center;
+        line-height: 55px;
+        vertical-align: middle;
+
+        width: 55px;
+        height: 55px;
+        color: @ms-red;
+        border: 2PX solid @ms-red;
+        border-radius: 30px;
+    }
+
+    .small {
+        font-size: 24px;
+        color: #999;
+        line-height: 1.1;
+
+        a {
+            color: @ms-red;
+        }
+    }
+
+    button {
+        width: 100%;
+        border: 1PX solid @ms-red;
+        color: @ms-red;
+        font-size: 42px;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 15px;
+        margin: 10px 0;
+
+        a {
+            display: inline-block;
+            color: @ms-red;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+
+.blank {
+    font-size: 28px;
+    background-color: #fff;
+    border-top: @border;
+    border-bottom: @border;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+//介绍页头部图片
+.top_img {
+    font-size: 28px;
+    // margin-top: 90px;
+    .block;
+    .w100;
+}
+
+.bottom {
+
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    span {
+        display: none;
+    }
+    button {
+        color: #fff;
+        text-align: center;
+        font-size: 32px;
+        line-height: 100px;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: @ms-red;
+        color: #fff;
+        &.default {
+            background-color: gray;
+            
+        }
+    }
+}
+.bottoms {
+    width: 100%;
+    height: 100px;
+     position: fixed;
+     bottom: 0;
+     left: 0;
+     z-index: 999;
+    span {
+        display: none;
+    }
+
+  button {
+        color: #fff;
+        text-align: center;
+        font-size: 32px;
+        line-height: 100px;
+        display: block;
+        width: 50%;
+        height: 100%;
+        background-color: @ms-red;
+        color: #fff;
+        float: left;
+        border: none;
+        &.white {
+            background-color: #fff;
+            color: @ms-red;
+            border-top: 1px solid #ccc;
+        }
+        &.orange {
+            background-color: #F39801;
+        }
+        &.default {
+            background-color: gray;
+            
+        }
+    }
+}
+//介绍页的悬浮文字
+.words {
+    width: 100%;
+    height: 90px;
+    line-height: 90px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    text-align: center;
+    position: relative;
+    top: -90px;
+    margin-bottom: -90px;
+    font-size: 32px;
+
+    p {
+
+        width: 100%;
+        text-align: center;
+    }
+}
+
+//介绍页产品方案
+.product_plan {
+    font-size: 28px;
+    .w100;
+    .t-c;
+    border-collapse: collapse;
+
+    thead {
+        background-color: @orange;
+        color: #fff;
+
+        th {
+            font-weight: 500;
+            padding: 20px 0;
+        }
+    }
+
+    tbody {
+        background-color: #fff;
+
+        td {
+            border-bottom: @border;
+            padding: 10px 0;
+        }
+    }
+}
+
+.show_controller {
+    text-align: center;
+    font-size: 24px;
+    color: #999;
+    margin: 15px 0 5px;
+
+    svg {
+        width: 24px;
+        margin-left: 15px;
+        vertical-align: middle;
+    }
+}
+
+.sub_title {
+    color: #999;
+    text-align: center;
+    margin: 20px 0;
+    font-size: 32px;
+
+    svg {
+        vertical-align: middle;
+        margin: 0 10px;
+    }
+}
+
+.tab_controller {
+    width: 100%;
+    height: 100px;
+    background-color: #fff;
+    border: @border;
+
+    li {
+        float: left;
+        width: 50%;
+        line-height: 100px;
+        text-align: center;
+        font-size: 32px;
+    }
+
+    .selected {
+        color: @ms-red;
+        border-bottom: 3PX solid @ms-red;
+        height: 97px;
+    }
+}

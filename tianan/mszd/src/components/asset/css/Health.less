@@ -1,0 +1,101 @@
+ @import "./zlib.v3.less";
+ .article {
+     padding: 30px;
+      
+      padding-bottom: 150px;
+     p {
+         margin-right: 0px;
+         margin-left: 0px;
+         text-indent: 29px;
+
+         margin-top: 20px;
+         line-height: 1.75em;
+         &.article_title {
+             text-align: center;
+         }
+     }
+ }
+
+ .tip {
+     width: 100%;
+     position: fixed;
+     bottom: 100px;
+     left: 0;
+     padding: 30px;
+     box-sizing: border-box;
+     background-color: #fff;
+     z-index: 10;
+     span {
+         display: block;
+         width: 60%;
+         height: 60px;
+         line-height: 60px;
+         border-radius: 60px;
+         background-color: #f1f1f1;
+         text-align: center;
+         margin: 20px auto;
+         color: @ms-red;
+     }
+ }
+
+ .mask {
+     width: 100%;
+     height: 100%;
+     background-color: rgba(0, 0, 0, .75);
+     bottom: 0;
+     height: 100%;
+     left: 0;
+
+     position: fixed;
+     right: 0;
+     top: 0;
+     width: 100%;
+ }
+
+ .bottom {
+
+     width: 100%;
+     height: 100px;
+     position: fixed;
+     bottom: 0;
+     left: 0;
+     z-index: 10;
+     background-color: #fff;
+     span {
+         display: none;
+     }
+     button {
+         color: #fff;
+         text-align: center;
+         font-size: 32px;
+         line-height: 60px;
+         display: inline-block;
+         width: 40%;
+         margin-top: 20px;
+         height: 60px;
+         background-color: @ms-red;
+         border-radius: 10px;
+
+         color: #fff;
+         float: left;
+         border: 1px solid @ms-red;
+         padding: 0;
+         margin-left: 7%;
+         &.white {
+             background-color: #fff;
+             color: @ms-red;
+         }
+     }
+ }
+
+ .page{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    background-color: #fff;
+    overflow-y: auto;
+
+ }

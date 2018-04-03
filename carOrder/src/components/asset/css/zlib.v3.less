@@ -1,0 +1,120 @@
+/**
+ * 文件：预定义 样式less 
+ * 作者：无名大强
+ * 版本：v0.3
+ * 版权：民盛集团
+ * 日期：2017-4-26
+**/
+
+/*CSS简写*/
+.f-l(){float:left}
+.f-r(){float:right}
+.p-r(){position:relative}
+.p-a(){position:absolute}
+.p-f(){position:fixed}
+.t-r(){text-align:right}
+.t-c(){text-align:center}
+.t-l(){text-align:left}
+.hide(){display:none}
+.block(){display:block}
+.inline(){display:inline-block}
+.bold(){font-weight: bold}
+.pointer(){cursor:pointer}
+.m-center(){margin:0 auto}
+.o-h(){overflow: hidden}
+.w100(){width:100%}
+.middle(){vertical-align: middle}
+
+/*变量*/
+@ms-red: #ba1e17;
+@border: 1PX solid #ccc;
+@img: "../img";
+@blue: #428fb8;
+@green: #86b97f;
+@orange: #f39900;
+
+
+/*清除浮动*/
+.clearfix() {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+/*清除浮动占位符*/
+.clear(){display: block;height: 0;clear: both;overflow: hidden;}
+
+/*单行文字垂直居中*/
+.one-height(@h) {
+    height: @h;
+    line-height: @h;
+}
+
+/*宽和高*/
+.size(@width, @height) {
+  width: @width;
+  height: @height;
+}
+
+/*正方形*/
+.square(@size) {
+  .size(@size, @size);
+}
+
+/*圆*/
+.circle(@d: 20px, @bg: #333,@color: #fff){
+    color: @color;
+    .square(@d);
+    border: 0;
+    border-radius: @d;
+    background-color: @bg;
+    .t-c;
+    .p-r;
+    overflow: hidden;
+}
+
+/*矩形圆角*/
+.radius(@r: 5px) {
+    border-radius: @r;
+}
+
+/*箭头向下*/
+.arrow-down (@h, @r, @bg: #333){
+    .square(0);
+    border-left:@r solid transparent;
+    border-right:@r solid transparent;
+    border-top:@h solid #0066cc;
+    border-bottom: 0;
+}
+
+/*箭头向上*/
+.arrow-up (@h, @r, @bg: #333){
+    .square(0); 
+    border-left:@r solid transparent;
+    border-right:@r solid transparent;
+    border-bottom:@h solid #0066cc;
+    border-top: 0;
+}
+
+ /*箭头向左*/
+.arrow-left (@h, @r, @bg: #333){
+    .square(0);
+    border-top:@r solid transparent;
+    border-bottom:@r solid transparent; 
+    border-right:@h solid @bg;
+    border-left: 0; 
+}
+   
+/*箭头向右*/
+.arrow-right (@h, @r, @bg: #333){
+    .square(0);
+    border-top:@r solid transparent;
+    border-bottom: @r solid transparent;
+    border-left: @h solid @bg;
+    border-right: 0;
+}

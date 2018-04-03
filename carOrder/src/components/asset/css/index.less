@@ -1,0 +1,199 @@
+/**
+ * 文件：民盛众安驾乘意外险页面样式
+ * 作者：无名小强
+ * 版本：v0.1
+ * 版权：民盛集团
+ * 日期：2017-1-10
+**/
+
+@import "./zlib.v3.less";
+@import "./init.less";
+@images: "../img";
+@orange: #f39801;
+@sub-title: #997a7a;
+html {
+    height: 100%;
+}
+
+body {
+    background-color: #fff;
+    .size(100%, 100%);
+    font-size: 28px;
+    height: 100%;
+}
+
+:global(.hide) {
+    .hide;
+}
+
+:global(.gray) {
+    color: #999;
+}
+
+
+
+//tab页控制按钮
+.tab_controller {
+    width: 100%;
+    height: 80px;
+    background-color: #fff;
+    border: none;
+
+    li {
+        float: left;
+        width: 25%;
+        line-height: 80px;
+        text-align: center;
+        font-size: 32px;
+    }
+
+    .selected {
+        color: @ms-red;
+        border-bottom: 3PX solid @ms-red;
+        height: 77px;
+    }
+}
+
+.content_ul {
+    background-color: #f1f1f1;
+
+    .content_li {
+       margin-bottom: 20px;
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        background-color: #fff;
+
+        .title_mes {
+            height: 70px;
+            line-height: 70px;
+            padding: 0 30px;
+            color: #000;
+            font-size: 34px;
+            label {
+                width: 60%;
+                overflow: hidden;
+
+                display: inline-block;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+            .mes_status {
+                display: inline-block;
+                float: right;
+                color: @ms-red;
+            }
+        }
+
+        .main_mes {
+            display: flex;
+            padding: 20px;
+            background-color: #F7F7F7;
+
+            .img_content {
+                width: 30%;
+                overflow: hidden;
+            }
+            ul {
+                width: 70%;
+                padding: 5px 20px;
+                li {
+                    overflow: hidden;
+                    height: 50px;
+                    line-height: 50px;
+                    .order_title {
+                        display: inline-block;
+                        width: 24%;
+                    }
+                    .order {
+                        width: 76%;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        display: inline-block;
+                        vertical-align: middle;
+                        white-space: nowrap;
+                    }
+                }
+            }
+        }
+        .price_mes {
+            height: 80px;
+            line-height: 80px;
+            text-align: right; // border-bottom: 1px solid #ccc;
+            padding-right: 20px;
+            .price {
+                color: #000;
+                font-size: 36px;
+            }
+        }
+        .operation {
+
+            height: 90px;
+            line-height: 90px;
+            text-align: right;
+            padding-right: 30px;
+            button {
+                width: 180px;
+                text-align: center;
+                height: 60px;
+                background-color: #fff;
+                border: none;
+                border: 1px solid #666;
+                border-radius: 30px;
+            }
+        }
+    }
+    .page {
+        padding: 0 20px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+}
+
+.pull_right {
+    display: inline-block;
+    float: right;
+}
+
+.company {
+
+    width: 100%;
+
+
+    background-color: #f2f2f2;
+
+    overflow: auto;
+}
+
+.company_ul {
+    margin-top: 20px;
+    background-color: #fff;
+    li {
+        height: 100px;
+        line-height: 100px;
+        border-bottom: 1px solid #ddd;
+        label {
+            width: 180px;
+            display: block;
+            overflow: hidden;
+            float: left;
+            box-sizing: border-box;
+            padding: 0 20px;
+            text-align: center;
+            img {
+                width: 60%;
+                vertical-align: middle;
+            }
+        }
+        .name {
+            display: inline-block;
+        }
+        .sales {
+
+            margin-left: 35px;
+        }
+    }
+}
+
+.default {
+    pointer-events: none;
+}

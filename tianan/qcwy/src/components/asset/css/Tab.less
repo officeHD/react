@@ -1,0 +1,104 @@
+//tab页控制按钮
+@import "./zlib.v3.less";
+.tab_controller {
+    width: 100%;
+    height: 100px;
+    background-color: #fff;
+    border: #ccc;
+
+    li {
+        float: left;
+        width: 33.3%;
+        line-height: 100px;
+        text-align: center;
+        font-size: 32px;
+    }
+
+    .selected {
+        color: @ms-red;
+        border-bottom: 3px solid @ms-red;
+        height: 97px;
+    }
+}
+
+.notice {
+    background-color: #F2F2F2;
+    padding: 40px;
+    font-size: 30px;
+    line-height: 50px;
+    p {
+        text-indent: 29px;
+        margin: 25px 0;
+    }
+    .notice_caption {
+        text-indent: 0;
+        text-align: center;
+        margin: 40px 0;
+        ;
+        font-size: 40px;
+        color: #000;
+    }
+    .notice_title {
+        color: #000;
+    }
+}
+.notice_li{
+    
+    border-top: 1px solid transparent;
+    li{
+        text-align: center;
+        margin: 70px 0;
+        img{
+            max-width: 100px;
+            margin: 0 auto;
+            display: block;
+            margin-bottom: 30px;
+        }
+    }
+}
+.tab_process{
+    p{
+      text-indent: 50px;  
+    }
+}
+.process{
+    height: 100%;
+    padding: 50px 35px;
+
+    li{
+        margin-left: 10%;
+        height: 180px;
+        border: 1px solid transparent;
+        border-left: 1px dashed #ccc;
+        position: relative;
+        padding-left: 60px;
+        color: #999;
+        h2{
+            margin-bottom: 20px;
+            font-size: 38px;
+            font-weight: 500;
+            color: #000;
+        }
+        img,svg{
+            position: absolute;
+            left: -40px;
+            top: 0px;
+        }
+        img{
+            max-width: 80px;
+        }
+        &:last-child{
+            border-left: none;
+        }
+    }
+    
+}
+.detail{
+    padding: 50px;
+    p{
+        margin: 20px 0px 0px; text-indent: 28px; text-align: justify; line-height: 1.75em;
+        &.title{
+            text-align: center;
+        }
+    }
+}

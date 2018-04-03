@@ -1,0 +1,1 @@
+.li_selector{width:400px;position:absolute;top:50%;left:0;right:0;margin:auto;padding:10px 0 20px 30px;background-color:#fff;border:0;border-radius:20px;transform:translateY(-50%);overflow:hidden}.li_selector li{display:inline-block;color:#999;border:0;height:auto;line-height:normal;padding:0;font-size:32px;margin:16px 20px 0 0}.li_selector li.selected{color:red}

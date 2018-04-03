@@ -1,0 +1,46 @@
+@import "./zlib.v3.less";
+
+//车型选择组件
+.one_style {
+    border-top: @border;
+    border-bottom: @border;
+    background-color: #fff;
+    margin-bottom: 20px;
+
+    &:last-child {
+        margin-bottom: 100px;
+    }
+}
+
+.style_title {
+    color: #448fb9;
+    border-bottom: @border;
+    padding: 20px;
+    text-indent: 60px;
+    background: url("@{img}/car.png") no-repeat left center;
+    background-size: auto 40%;
+    background-position: 10px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    
+}
+
+.style_name {
+    padding: 20px;
+}
+
+.style_detail {
+    padding-top: 20px;
+    .clearfix;
+    li {
+        .f-l;
+        padding-left: 20px;
+        margin-right: 40px;
+        background: url("@{img}/block.png") no-repeat left center;
+        background-size: auto 35%;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}

@@ -1,0 +1,70 @@
+{
+    "componies": [
+    {
+        "id": 1,
+        "product": "华夏福",
+        "productid": "HXHXF001A",
+        "spell": "lax",
+        "subinsurance": "",
+        "term": [
+        {
+            "name": "华夏华夏福两全保险",
+            "url": "/static/pdf/huaxia/hxf.pdf"
+        } , {
+            "name": "华夏附加华夏福重大疾病保险",
+            "url": "/static/pdf/huaxia/hxfzj.pdf"
+        } ]
+
+    },
+    {
+        "id": 2,
+        "product": "乐安康",
+        "productid": "LAK00O1",
+        "spell": "lak",
+        "subinsurance": "附加乐相伴豁免保费重疾",
+        "term": [
+        {
+            "name": "泰康乐安康终身重大疾病保险",
+            "url": "/static/pdf/taikang/lak.pdf"
+        }]
+
+    },
+    {
+        "id": 3,
+        "product": "乐行天下",
+        "productid": "LXTX00O1",
+        "spell": "lxtx",
+        "subinsurance": "附加乐相伴豁免保费重疾",
+        "term": [
+        {
+            "name": "泰康乐行天下两全保险条款",
+            "url": "/static/pdf/taikang/lxtx1.pdf"
+        },
+        {
+            "name": "泰康附加乐行天下意外伤害保险条款",
+            "url": "/static/pdf/taikang/lxtx2.pdf"
+        },
+        {
+            "name": "泰康附加乐行天下意外住院津贴医疗保险条款",
+            "url": "/static/pdf/taikang/lxtx3.pdf"
+        },
+        {
+            "name": "泰康附加乐相伴豁免保险费重大疾病保险",
+            "url": "/static/pdf/taikang/PersonalInsuranceTips.pdf"
+        }]
+
+    },
+    {
+        "id": 4,
+        "product": "乐行天下",
+        "productid": "LXTX00O5",
+        "spell": "lax",
+        "subinsurance": "附加乐相伴豁免保费重疾",
+        "term": [
+            "泰康乐安心终身重大疾病保险条款",
+            "泰康乐相伴B款豁免保险费疾病保险条款"
+        ]
+
+    }]
+
+}

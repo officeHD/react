@@ -1,0 +1,105 @@
+@gray_border: #b3b3b3;
+@blue_car: #448fb9;
+@cyan: #12b5b0;
+
+@import "./zlib.v3.less";
+
+.switcher {
+    margin: 130px auto 20px;
+    width: 540px;
+    border: 1PX solid @ms-red;
+    border-radius: 16px;
+    .clearfix;
+    background-color: #fff;
+    color: @ms-red;
+    .o-h;
+
+    li {
+        .f-l;
+        .t-c;
+        width: 33.33%;
+        font-size: 30px;
+        padding: 20px 0;
+    }
+    
+    .selected {
+        color: #fff;
+        background-color: @ms-red;
+    }
+}
+
+.insurance_date {
+    border-bottom: @border;
+    background-color: #fff;
+    li {
+        padding: 0 20px;
+        .one-height(100px);
+        border-top: @border;
+        label {
+            margin-right: 30px;
+        }
+        input {
+            border: 0;
+            height: 80px;
+            line-height: 100%;
+            width: 300px;
+        }
+    }
+}
+
+.items {
+    .w100;
+    margin: 30px 0 280px;
+    border-collapse:collapse;
+
+    thead {
+        span {
+            padding: 4px 16px;
+            color: #fff;
+            background-color: @orange;
+        }
+        th {
+            padding-bottom: 20px;
+            &:first-child {
+                .t-l;
+                padding-left: 20px; 
+            }
+            &:nth-child(2) {
+                    .t-r;
+                }
+            &:last-child {
+                .t-r;
+                padding-right: 20px;
+            }
+        }
+    }
+
+    tbody {
+        border: @border;
+        background-color: #fff;
+        tr {
+            td {
+                border-bottom: @border;
+                .one-height(100px);
+                &:first-child {
+                    .t-l;
+                    padding-left: 20px; 
+                }
+
+                &:nth-child(2) {
+                    padding-right: 40px;
+                    .t-r;
+                    background: url('@{img}/down.png') no-repeat right center;
+                    background-size: auto 40%;
+                }
+
+                &:last-child {
+                    .t-r;
+                    padding-right: 20px;
+                }
+
+            }
+        }
+    }
+}
+

@@ -1,0 +1,31 @@
+@import "./zlib.v3.less";
+
+//下一步 按钮
+.next {
+    display: block;
+    .w100;
+}
+.fixed {
+    .next;
+    .p-f;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(150, 150, 150, 0.5);
+}
+
+.button {
+    width: 80%;
+    margin: 40px 10%;
+    background-color: @orange;
+    color: #fff;
+    font-size: 36px;
+    letter-spacing:4px;
+    padding: 20px 0;
+    border: 0;
+    border-radius: 10px;
+}
+
+.disabled {
+    .button;
+    background-color: #666;
+}

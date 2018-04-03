@@ -1,0 +1,195 @@
+@import "./zlib.v3.less";
+
+//保险关系人组件
+.sheet {
+    background-color: #fff;
+    border-top: @border;
+    margin-bottom: 30px;
+
+    ul {
+        border: 0;
+        padding: 20px 0;
+    }
+
+    li {
+        .one-height(40px);
+        border: 0;
+    }
+
+    label {
+        width: initial;
+        margin-right: 40px;
+        margin-left: 28px;
+    }
+}
+
+.total {
+    .t-c;
+    padding-top: 20px;
+    font-size: 20px;
+
+    span {
+        color: @ms-red;
+        font-size: 50px;
+    }
+}
+.company_name {
+    .t-c;
+    padding-bottom: 40px;
+    border-bottom: @border;
+}
+
+.right {
+    .f-r;
+    margin-right: 28px;
+}
+
+.gray {
+    color: #999;
+}
+
+.sum {
+    height: 100px;
+    line-height: 100px;
+    .t-r;
+    padding-right: 20px;
+    border-bottom: @border;
+    border-top: @border;
+
+    span {
+        color: @ms-red;
+    }
+}
+
+:global(.item_title) {
+    padding: 0 28px 10px 28px;
+    svg {
+        vertical-align: middle;
+    }
+
+
+}
+
+.sameAs {
+    .f-r;
+    padding-left: 54px;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-image: url("@{img}/checkbox_on.png") ;
+}
+
+.dontAs {
+    .sameAs;
+    background-image: url("@{img}/checkbox_off.png") ;
+}
+
+.distribution {
+    ul {
+        li {
+            &.address_li {
+                min-height: 40px;
+                height: auto;
+                line-height: 36px;
+                padding: 30px 20px;
+            }   
+            .phone {
+                .f-r;
+            }
+
+            .open {
+                .f-r;
+                width: 20px;
+                margin-top: 30px;
+            }
+        }
+    }
+}
+
+.notice {
+    .w100;
+    margin: 20px 0 280px 0;
+    padding-bottom: 40px;
+}
+.notice_title {
+    margin-left: 20px;
+}
+
+.notice_item {
+    padding: 10px 20px;
+    text-indent: 60px;
+    line-height: 1.5;
+}
+
+.agree {
+    padding-left: 54px;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-image: url("@{img}/checkbox_off.png") ;
+
+}
+.selected {
+    .agree;
+    background-image: url("@{img}/checkbox_on.png") ;
+}
+.a {
+    color: @blue;
+    text-decoration: underline;
+    padding: 0 10px;
+}
+
+//保险条款内容
+.paper {
+    .size(80%, 80%);
+    margin: 10% auto;
+    background-color: #fff;
+    .p-r;
+
+    
+}
+
+.title {
+    .p-a;
+    top: 0;
+    left: 0;
+    .w100;
+    height: 80px;
+    line-height: 80px;
+    .t-c;
+    background-color: #fff;
+    z-index: 101;
+}
+
+.close {
+    .p-a;
+    right: 30px;
+    top: 0;
+    font-size: 36px;
+}
+
+.body {
+    overflow: scroll;
+    height: 100%;
+    .p-a;
+    top: 0;
+    left: 0;
+    header {
+        .t-c;
+        .bold;
+        margin: 20px 0;
+        &:first-child{
+            margin-top: 80px;
+        }
+    }
+
+    section{
+        margin-bottom: 20px;
+        padding: 0 20px;
+
+
+        label {
+            margin-right: 60px;
+        }
+    }
+}  

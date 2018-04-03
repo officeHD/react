@@ -1,0 +1,236 @@
+@import "./zlib.v3.less";
+.top_title {
+    background-color: #F2F2F2;
+    padding: 0 30px;
+    height: 80px;
+    line-height: 80px;
+    width: 100%;
+    box-sizing: border-box;
+    img {
+        display: inline-block;
+
+        max-width: 37px;
+        vertical-align: middle;
+        margin: 0 17px 5px 0;
+    }
+
+    .top_span {
+        input {
+            width: 20px;
+            height: 20px;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+        float: right;
+    }}
+
+.content {
+    padding: 0 15px;
+    background-color: #fff;
+}
+
+.content_ul {
+    background-color: #fff; // margin-bottom: 30px;
+}
+
+.list {
+    border-bottom: @border;
+    height: 80px;
+    line-height: 80px;
+    padding: 0 10px;
+    display: flex;
+    &:last-child {
+        border-bottom: none;
+    }
+    label {
+        display: inline-block;
+        width: 180px;
+    }
+
+    input,.rightlabel {
+        border: 0;
+        width: 400px;
+        margin-left: 10px;
+    }
+    &.list_long {
+        padding-left: 0;
+        overflow: hidden;
+        label {
+            width: 400px;
+        }
+        input {
+            width: 100px;
+        }
+    }
+}
+
+.agree {
+    padding: 30px;
+    margin-bottom: 100px;
+}
+
+.notice {
+    .w100;
+    margin: 20px 0 120px 0;
+    font-size: 30px; // padding-bottom: 40px;
+    .notice_list{
+        display: inline-block;
+        padding-left: 20px;
+        font-size: 24px;
+    }
+}
+
+.notice_title {
+    margin-left: 20px;
+}
+
+.ms_red {
+    color: @ms-red;
+}
+
+.notice_item {
+    padding: 10px 20px; // text-indent: 60px;
+    line-height: 1.5;
+}
+
+.agreed {
+    box-sizing: border-box;
+    font-size: 24px;
+    display: inline-block;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 54px;
+    vertical-align: middle;
+    margin-right: 10px;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-image: url("@{img}/checkbox_off.png");
+}
+
+.selected {
+    .agreed;
+    background-image: url("@{img}/checkbox_on.png");
+}
+
+.a {
+    color: @ms-red;
+    text-decoration: underline;
+    padding: 0 5px;
+}
+
+.bottom {
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    span {
+        display: none;
+    }
+    button {
+        color: #fff;
+        text-align: center;
+        font-size: 32px;
+        line-height: 100px;
+        display: block;
+        width: 50%;
+        height: 100%;
+        background-color: @ms-red;
+        color: #fff;
+        float: left;
+        border: none;
+        &.white {
+            background-color: #fff;
+            color: @ms-red;
+        }
+        &.orange {
+            background-color: #F39801;
+        }
+        &.default {
+            background-color: gray;
+            pointer-events: none;
+        }
+    }
+}
+
+.pay_content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.pay {
+    position: absolute;
+    width: 75%;
+    height: 380px;
+    background-color: #fff;
+    z-index: 110;
+    top: 50%;
+    left: 50%;
+    border-radius: 20px;
+    transform: translate(-50%, -50%);
+   
+    ul {
+        width: 100%;
+        height:  100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        li {
+            width: 36%;
+            text-align: center;
+
+            box-sizing: border-box;
+
+             img{
+                max-width: 150px;
+                display: block;margin: 0 auto;
+                margin-bottom: 30px;
+            }
+            span {
+                display: inline-block;
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
+.mask {
+    background-color: rgba(0, 0, 0, 0.85);
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    opacity: 1;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 101;
+}
+
+.place {
+
+    width: auto;
+
+    display: inline-block;
+    .selections {
+        display: inline-block;
+        width: 100%;
+        .select_toubao {
+            width: 130px;
+
+            margin-right: 5px;
+            margin-left: 0;
+        }
+        .select_bank{
+            width: 4rem;
+            
+        }
+        .select_card{
+            width: 180px;
+        }
+    }
+}

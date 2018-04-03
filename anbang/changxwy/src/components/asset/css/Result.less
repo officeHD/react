@@ -1,0 +1,1220 @@
+/**
+ * 文件：车险页面样式
+ * 作者：无名小强
+ * 版本：v0.1
+ * 版权：民盛集团
+ * 日期：2016-10-12
+**/
+
+@gray_border: #b3b3b3;
+@blue_car: #448fb9;
+@cyan: #12b5b0;
+
+@import "./zlib.v3.less";
+@orange: #f39900;
+
+body {
+    background-color: #f2f2f2;
+    .size(100%, 100%);
+}
+
+.hide {
+    .hide;
+}
+
+#app {
+    font-size: 28px;
+}
+
+// //标题栏组件
+// .title_bar {
+//     .w100;
+//     .p-f;
+//     top: 0;
+//     height: 90px;
+//     background-color: #fff;
+//     border-bottom: 1PX solid @gray_border;
+//     .t-c;
+
+//     button {
+//         .p-a;
+//         left: 20px;
+//         .square(50px);
+//         top: 50%;
+//         margin-top: -25px;
+//         border: 0;
+//         background: url("@{img}/back.png"); 
+//         background-color: #fff;
+//         background-size: 100% 100%;
+//         background-repeat: no-repeat;
+
+//         &.others {
+//             right: 20px;
+//             left: auto;
+//             background-image: url("@{img}/others.png");
+//         }
+//     }
+
+//     h1 {
+//         .w100;
+//         height: 100%;
+//         line-height: 90px;
+//         .t-c;
+//         font-size: 40px;
+//     }
+// }
+
+
+//保险公司列表组件
+.company_list {
+    font-size: 28px;
+    margin-top: 110px;
+    border-top: @border;
+
+    li {
+        padding: 20px;
+        background-color: #fff;
+        border-bottom: @border;
+
+        img {
+            width: 38%;
+            margin-right: 20px;
+            float: left;
+            vertical-align: top;
+        }
+
+        .clear {
+            clear: both;
+            display: block;
+            height: 0;
+        }
+
+        section {
+            .w100;
+
+            .title {
+                font-size: 30px;
+                color: #333;
+                margin: 10px;
+            }
+            .content {
+                color: #a2a2a2;
+                font-size: 24px;
+                margin: 10px;
+            }
+
+            img {
+                width: 130px;
+                margin: 0;
+                float: right;
+            }
+        }
+    }
+}
+
+//车险快速报价首页组件
+.banner {
+    .w100;
+    vertical-align: bottom;
+    margin-top: 90px;
+}
+
+.index_desk {
+    .p-r;
+    top: -20px;
+    font-size: 28px;
+    width: 90%;
+    background-color: #fff;
+    border-radius: 20px;
+    margin: 0 auto 60px;
+    box-shadow: 1px 4px 8px #768c99; 
+
+    .index_ul {
+        padding: 20px 0; 
+        .li {
+            border-bottom: @border;
+            background-color: #fff;
+            height: 100px;
+            padding: 0 20px;
+            .clearfix;
+
+            .item_name {
+                margin-right: 30px;
+                line-height: 100px;
+            }
+
+            .selections {
+                .f-r;
+                line-height: 100px;
+                label {
+                    .inline;
+                    padding-left: 50px;
+                    margin-left: 40px;
+                    background-image: url("@{img}/radio_off.png") ;
+                    background-position: left center;
+                    background-repeat: no-repeat;
+                    background-size: auto 40%;
+
+                    &.selected {
+                        background-image: url("@{img}/radio_on.png");
+                        
+                    }
+                }
+            }
+
+            .info_input {
+                height: 100%;
+                line-height: 100px;
+                border: 0;
+                width: 300px;
+
+                &.car_num {
+                    width: 140px;
+                }
+            }
+
+            .select_province {
+                .t-c;
+                .bold;
+                width: 50px;
+                padding-right: 40px;
+                margin-left: 6px;
+                background: url("@{img}/down.png") no-repeat right center;
+                background-size: auto 100%;
+                border: 0;
+            }
+
+        }
+    }
+
+    .new_car {
+        .one-height(100px);
+        .f-r;
+        span {
+            padding: 0 0 0 40px;
+            background: url("@{img}/new_car.png") no-repeat left center;
+            background-size: auto 100%;
+
+        }
+    }
+
+    .select_toubao {
+        .t-r;
+        max-width: 160px;
+        height: 80px;
+        border: 0;
+        padding: 0;
+        margin: 0 6px 0 0;
+    }
+    .recent {
+        color: @ms-red;
+        .f-r;
+        margin: 0 20px;
+    }
+
+    .remaining {
+        margin-left: 20px;
+        color: @orange;
+    }
+}
+
+//选择省份的组件
+.province_selector {
+    font-size: 28px;
+    .p-f;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    background-color: rgba(0,0,0,0.5);
+
+    .box {
+        .size(400px, 510px);
+        background-color: #fff;
+        .p-f;
+        top: 50%;
+        left: 50%;
+        margin: -300px auto auto -200px;
+        border-radius: 20px;
+        .o-h;
+
+        .selected_div {
+            .size(300px, 80px);
+            .p-a;
+            border-top: 2px solid @ms-red;
+            border-bottom: 2px solid @ms-red;
+            margin: 140px 0  0 50px;
+        }
+
+        ul {
+            .p-a;
+            .w100;
+            .clearfix;
+            li {
+                .t-c;
+                color: #999;
+                font-size: 32px;
+                width: 20%;
+                .f-l;
+                padding: 12px 0;
+
+
+                &.selected {
+                    color: @ms-red;
+                    .bold;
+
+                }
+
+            }
+        }
+    }
+}
+
+//填写车辆信息的组件
+.car_info {
+    font-size: 28px;
+    margin-top: 0;
+
+    .info_ul {
+        border-top: @border;
+        margin-bottom: 30px;
+
+        li {
+            background-color: #fff;
+            border-bottom: @border;
+            .one-height(100px);
+            padding: 0 20px;
+            .clearfix;
+
+            label {
+                .inline;
+                width: 160px;
+            }
+
+            input {
+                border: 0;
+                height: 80px; 
+            }
+
+            span {
+                .f-r;
+            }
+        }
+    }
+}
+
+//最近询价车辆
+.recent_list {
+    border-top: @border;
+    font-size: 28px;
+
+    li {
+        background: #fff;
+        border-bottom: @border;
+        padding: 10px 20px;
+    }
+
+    label{
+        .f-r;
+    }
+}
+
+//车型选择组件
+.select_style {
+    font-size: 28px;
+    margin-top: 110px;
+    margin-bottom: 110px;
+
+    .one_style {
+        border-top: @border;
+        border-bottom: @border;
+        background-color: #fff;
+        margin-top: 20px;
+
+        .style_title {
+            color: @blue_car;
+            border-bottom: 1PX solid #ddd;
+            padding: 20px;
+            text-indent: 60px;
+            background: url("@{img}/car.png") no-repeat left center;
+            background-size: auto 40%;
+            background-position: 10px;
+            .o-h;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            
+        }
+
+        .style_name {
+            padding: 20px;
+        }
+        .style_detail {
+            padding-top: 20px;
+            .clearfix;
+            li {
+                .f-l;
+                padding-left: 20px;
+                margin-right: 40px;
+                background: url("@{img}/block.png") no-repeat left center;
+                background-size: auto 35%;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
+
+
+//选择险种组件
+.plan {
+    font-size: 28px;
+    margin: 110px 0 240px;
+
+    .switcher {
+        margin: 20px auto;
+        width: 540px;
+        border: 1PX solid @ms-red;
+        border-radius: 16px;
+        .clearfix;
+        background-color: #fff;
+        color: @ms-red;
+        .o-h;
+
+        li {
+            .f-l;
+            .t-c;
+            width: 33.33%;
+            font-size: 30px;
+            padding: 20px 0;
+
+            &.selected {
+                color: #fff;
+                background-color: @ms-red;
+            }
+
+        }
+    }
+    .insurance_date {
+        border-bottom: @border;
+        background-color: #fff;
+        li {
+            padding: 0 20px;
+            .one-height(100px);
+            border-top: @border;
+            label {
+                margin-right: 30px;
+            }
+            input {
+                border: 0;
+                height: 80px;
+                line-height: 100%;
+                width: 300px;
+            }
+            img {
+                .f-r;
+                width: 100px;
+                margin-top: 22px;
+            }
+
+        }
+
+    }
+
+    table {
+        .w100;
+        margin: 30px 0;
+        border-collapse:collapse;
+
+        thead {
+            span {
+                padding: 4px 16px;
+                color: #fff;
+                background-color: @orange;
+            }
+            th {
+                padding-bottom: 20px;
+                &:first-child {
+                    .t-l;
+                    padding-left: 20px; 
+                }
+                &:nth-child(2) {
+                        .t-r;
+                    }
+                &:last-child {
+                    .t-r;
+                    padding-right: 20px;
+                }
+            }
+        }
+
+        tbody {
+            border: @border;
+            background-color: #fff;
+            tr {
+                td {
+                    border-bottom: @border;
+                    .one-height(100px);
+                    &:first-child {
+                        .t-l;
+                        padding-left: 20px; 
+                    }
+
+                    &:nth-child(2) {
+                        padding-right: 40px;
+                        .t-r;
+                        background: url('@{img}/down.png') no-repeat right center;
+                        background-size: auto 40%;
+                    }
+
+                    &:last-child {
+                        .t-r;
+                        padding-right: 20px;
+                    }
+
+                }
+            }
+        }
+
+    }
+    // .traffic_insurance {
+    //     border-bottom: @border;
+    //     border-top: @border;
+    //     background-color: #fff;
+    //     padding: 0 20px;
+    //     li {
+    //         .one-height(100px);
+    //         img {
+    //             .f-r;
+    //             width: 100px;
+    //             margin-top: 22px;
+    //         }
+    //     }
+    // }
+}
+
+//保险关系人组件
+.stakeholder {
+    font-size: 28px;
+    margin: 90px 0 160px;
+    padding-top: 20px;
+
+    .sheet {
+        background-color: #fff;
+        border-top: @border;
+
+        ul {
+            border: 0;
+            padding: 20px 0;
+            li {
+                .one-height(40px);
+                border: 0;
+
+                label {
+                    width: initial;
+                    margin-right: 40px;
+                }
+            }
+        }
+
+        .total {
+            .t-c;
+            padding-top: 20px;
+            font-size: 20px;
+
+            span {
+                color: @ms-red;
+                font-size: 50px;
+            }
+        }
+
+        .company_name {
+            .t-c;
+            padding-bottom: 40px;
+            border-bottom: @border;
+        }
+
+        .right {
+            .f-r;
+        }
+
+        .gray {
+            color: #999;
+        }
+
+        .sum {
+            height: 100px;
+            line-height: 100px;
+            .t-r;
+            padding-right: 20px;
+            border-bottom: @border;
+            border-top: @border;
+
+            span {
+                color: @ms-red;
+            }
+        }
+    }
+
+    .item_title {
+        padding: 20px 20px 20px 70px;
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        background-position: left center;
+
+        span {
+            .f-r;
+            padding-left: 54px;
+            background-size: auto 100%;
+            background-repeat: no-repeat;
+            background-position: left center;
+            background-image: url("@{img}/checkbox_off.png") ;
+
+            &.selected {
+                background-image: url("@{img}/checkbox_on.png") ;
+            }
+
+        }
+
+    }
+
+    .insured {
+        .item_title {
+            background-image: url("@{img}/insured.png") ;
+        }
+    }
+
+    .applicant {
+        .item_title {
+            background-image: url("@{img}/applicant.png") ;
+        }
+    }
+
+    .distribution {
+        .item_title {
+            background-image: url("@{img}/distribution.png") ;
+        }
+    }
+
+    .car_owner {
+        .item_title {
+            background-image: url("@{img}/owner.png") ;
+        }
+    }
+
+    .date {
+        .item_title {
+            background-image: url("@{img}/date.png") ;
+        }
+    }
+
+    .car_infos {
+        .item_title {
+            background-image: url("@{img}/car_info.png") ;
+        }
+    }
+
+
+
+    ul {
+        background-color: #fff;
+        border-top: @border;
+        li {
+            border-bottom: @border;
+            .one-height(100px);
+            padding: 0 20px;
+
+            label {
+                .inline;
+                width: 160px;
+            }
+
+            input {
+                vertical-align: middle;
+                border: 0;
+            }
+        }
+    }
+
+    .distribution {
+        ul {
+            li {
+                &.address_li {
+                    min-height: 40px;
+                    height: auto;
+                    line-height: 36px;
+                    padding: 30px 20px;
+                }   
+                .phone {
+                    .f-r;
+                }
+
+                .open {
+                    .f-r;
+                    width: 20px;
+                    margin-top: 30px;
+                }
+            }
+        }
+    }
+
+    .notice {
+        .w100;
+        margin: 20px 0 0 0;
+        padding-bottom: 40px;
+        .notice_title {
+            margin-left: 20px;
+        }
+
+        .notice_item {
+            padding: 0 20px;
+            text-indent: 60px;
+        }
+
+        .agree {
+            padding-left: 54px;
+            background-size: auto 100%;
+            background-repeat: no-repeat;
+            background-position: left center;
+            background-image: url("@{img}/checkbox_off.png") ;
+
+            &.selected {
+                background-image: url("@{img}/checkbox_on.png") ;
+            }
+        }
+        .a {
+            color: @blue;
+            text-decoration: underline;
+            padding: 0 10px;
+        }
+    }
+}
+
+//报价结果组件
+.result {
+    margin-top: 110px;
+    margin-bottom: 100px;
+    li {
+        margin-top: 20px;
+        background-color: #fff;
+        border-bottom: @border;
+        border-top: @border;
+        padding: 40px 20px 0;
+        font-size: 24px;
+        margin-bottom: 100px;
+    }
+
+    .total_table {
+        .w100;
+        .money_tr {
+            td {
+                padding: 20px 0;
+                .cyan {
+                    color: @cyan;
+                }
+
+            }
+        }
+
+        td {
+            &.no_wrap {
+                white-space:nowrap;
+                
+            }
+            img {
+                width: 80px;
+            }
+
+        }
+
+        p {
+            margin: 0;
+            padding: 0;
+        }
+        .company_name {
+            font-size: 36px;
+
+        }
+        .company_detail {
+            color: #999;
+        }
+        .sum_td {
+            font-size: 32px;
+            .t-r;
+            color: @cyan;
+            span {
+                font-size: 40px;
+            }
+        }
+        
+    }
+
+    .btn_div {
+        .t-c;
+        .apply {
+            background-color: @orange;
+            color: #fff;
+            margin: 20px auto 60px;
+            border: 0;
+            padding: 20px 30px;
+            font-size: 30px;
+        }
+    }
+
+    .detail_table {
+        .w100;
+        border-top: 2px dashed #ccc;
+        font-size: 24px;
+        margin-bottom: 40px;
+        th {
+            .t-c;
+            .bold;
+            background: #f2f2f2;
+        }
+
+        td {
+            padding: 10px 0;
+            .t-c;
+
+            &:first-child {
+                .t-l;
+            }
+
+            &:last-child {
+                .t-r;
+            }
+        }
+
+        tbody {
+            td {
+                border-bottom: @border;
+
+                &:last-child {
+                    white-space:nowrap;
+                }
+
+                &:nth-child(2) {
+                    white-space:nowrap;
+                }
+            }
+        }
+    }
+
+    .handler {
+        .p-a;
+        height: 80px;
+        width: 30%;
+        right: 20px;
+        margin: -1px auto 0;
+        border-left: @border;
+        border-right: @border;
+        border-bottom: @border;
+        background-color: #fff;
+        background-image: url('@{img}/down_arrow.png');
+        background-size: auto 40%;
+        background-repeat: no-repeat;
+        background-position: center center;
+
+        &.toHide {
+            background-image: url('@{img}/up_arrow.png');
+        }
+
+    }
+}
+
+//保险条款内容
+.Items {
+    font-size: 28px;
+    .p-f;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    background-color: rgba(0,0,0,0.5);
+
+
+    .paper {
+        .size(80%, 80%);
+        margin: 10% auto;
+        background-color: #fff;
+        .p-r;
+
+        
+        .title {
+            .p-a;
+            top: 0;
+            left: 0;
+            .w100;
+            height: 80px;
+            line-height: 80px;
+            .t-c;
+            background-color: #fff;
+        }
+
+        .close {
+            .p-a;
+            right: 30px;
+            top: 10px;
+            font-size: 36px;
+        }
+
+        .body {
+            overflow: scroll;
+            height: 100%;
+            .p-a;
+            top: 0;
+            left: 0;
+            header {
+                .t-c;
+                .bold;
+                margin: 20px 0;
+                &:first-child{
+                    margin-top: 80px;
+                }
+            }
+
+            section{
+                margin-bottom: 20px;
+                padding: 0 20px;
+
+
+                label {
+                    margin-right: 60px;
+                }
+            }
+        }
+        
+    }
+
+}
+
+//单选选择器组件
+.radio_selector {
+    font-size: 28px;
+    .p-f;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    background-color: rgba(0,0,0,0.5);
+
+    ul {
+        width: 400px;
+        background-color: #fff;
+        .p-a;
+        top: 50%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        border-radius: 20px;
+        -ms-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%);
+        .o-h;
+        border: 0;
+
+        li {
+            .one-height(100px);
+            text-indent: 40px;
+            .clearfix;
+            border-bottom: @border;
+            padding-left: 40px;
+            .o-h;
+
+            &:last-child {
+                border-bottom: 0;
+            }
+
+            img {
+                .square(40px);
+                margin-top: 30px;
+                margin-right: 40px;
+                .inline;
+                .f-r;
+            }
+        }
+    }
+}
+
+//订单结果组件
+.final {
+    font-size: 28px;
+    margin-top: 90px;
+
+    iframe {
+        .w100;
+        height: 70px;
+        border: 0;
+    }
+
+    p {
+        .t-c;
+    }
+
+    .t-c;
+    .bg {
+        width: 100%;
+        height: 500px;
+        background-image: url("@{img}/bg_final.png") ;
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+        background-position: left top;
+    }
+
+    .success {
+        .t-c;
+        .p-f;
+        top: 120px;
+        .w100;
+        font-size: 36px;
+        padding-top: 20px;
+
+        .red {
+            color: @ms-red;
+        }
+
+        p {
+            &:first-child {
+                font-size: 42px;
+                margin-bottom: 20px;
+            }
+        }
+        
+    }
+
+    button {
+        width: 40%;
+        padding: 10px 0;
+        margin: 80px 5%;
+        background-color: @orange;
+        color: #fff;
+        border: 0;
+        font-size: 36px;
+        .bold;
+        border-radius: 10px;
+
+        &:last-child {
+            background-color: @blue;
+        }
+    }
+}
+
+.address_ul {
+    li {
+        border-bottom: @border;
+        border-top: @border;
+        margin-bottom: 20px;
+        background: #fff;
+
+        .lay {
+            padding: 10px 20px 0;
+
+            .phone{
+                .f-r;
+            }
+        }
+
+        .last_lay {
+            padding: 10px 20px 10px;
+            border-top: @border;
+            margin-top: 10px;
+
+            .btns {
+                .f-r;
+            }
+
+            .btn {
+                background: #fff;
+                border: 0;
+                padding: 0 30px;
+            }
+
+            .radio {
+                height: 40px;
+                width: auto;
+                vertical-align: middle;
+            }
+        }
+    }
+}
+
+.address_form {
+    background-color: #fff;
+    border-top: @border;
+}
+
+//公共部分
+//下一步 按钮
+button.next {
+    display: block;
+    width: 80%;
+    margin: 100px auto;
+    padding: 10px 0;
+    background-color: @orange;
+    color: #fff;
+    border: 0;
+    font-size: 40px;
+    .bold;
+    border-radius: 10px;
+
+    &.fixed {
+        .p-f;
+        bottom: 0;
+        left: 0;
+        margin: 0 0 30px 10%;
+    }
+}
+
+.button_bottom {
+    .w100;
+    button {
+        width: 80%;
+        margin: 40px 10%;
+        padding: 10px 0;
+        background-color: #f39900;
+        color: #fff;
+        border: 0;
+        font-size: 36px;
+        border-radius: 10px;
+    }
+
+
+}
+
+.button_fixed {
+    .button_bottom;
+    position : fixed;
+    bottom : 0;
+    left : 0;
+    background-color: rgba(150, 150, 150, 0.5);
+}
+
+.top_tip {
+    font-size: 28px;
+    text-align: center;
+    padding: 20px 0;
+    color: #999;
+    margin-top: 90px;
+}
+
+.switcher_img {
+    .f-r;
+    width: 100px;
+    margin-top: 22px;
+}
+
+//单选选择器组件
+.selector_radio {
+    font-size: 28px;
+    .p-f;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    background-color: rgba(0,0,0,0.5);
+
+    ul {
+        width: 400px;
+        background-color: #fff;
+        .p-a;
+        top: 50%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        border-radius: 20px;
+        -ms-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%);
+        .o-h;
+        border: 0;
+
+        li {
+            .one-height(100px);
+            text-indent: 40px;
+            .t-l;
+            .clearfix;
+            border-bottom: @border;
+            padding-left: 40px;
+            .o-h;
+
+            &:last-child {
+                border-bottom: 0;
+            }
+
+            img {
+                .square(40px);
+                margin-top: 30px;
+                margin-right: 40px;
+                .inline;
+                .f-r;
+            }
+        }
+    }
+}
+
+
+//li选择控件
+.li_selector {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background-color: rgba(0,0,0,0.5);
+
+    ul {
+        width: 400px;
+        .p-a;
+        top: 50%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        padding: 10px 0 20px 30px;
+        background-color: #fff;
+        border: 0;
+        border-radius: 20px;
+        -ms-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%);
+        .o-h;
+
+        li {
+            .inline;
+            color: #999;
+            border: 0;
+            height: auto;
+            line-height: normal;
+            padding: 0;
+            font-size: 32px;
+            margin: 16px 20px 0 0;
+
+            &.selected {
+                color: @ms-red;
+            }
+        }
+    }
+}
+
+//显示爱豆页面的子页面
+.sub_frame {
+    .p-f;
+    top: 920px;
+    left: 0;
+    .w100;
+    height: 100%;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}

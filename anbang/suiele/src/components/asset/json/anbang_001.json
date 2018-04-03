@@ -1,0 +1,94 @@
+ 
+[
+    {
+        "age": 0,
+        "value": {
+            "man": 673,
+            "femal": 534
+        }
+    },
+    {
+        "age": 1,
+        "value": {
+            "man": 665,
+            "femal": 519
+        }
+    },
+    {
+        "age": 2,
+        "value": {
+            "man": 677,
+            "femal": 523
+        }
+    },
+    {
+        "age": 3,
+        "value": {
+            "man": 698,
+            "femal": 535
+        }
+    },
+    {
+        "age": 4,
+        "value": {
+            "man": 729,
+            "femal": 553
+        }
+    },
+    {
+        "age": 5,
+        "value": {
+            "man": 764,
+            "femal": 576
+        }
+    },
+    {
+        "age": 6,
+        "value": {
+            "man": 805,
+            "femal": 607
+        }
+    },
+    {
+        "age": 7,
+        "value": {
+            "man": 853,
+            "femal": 643
+        }
+    },
+    {
+        "age": 8,
+        "value": {
+            "man": 907,
+            "femal": 683
+        }
+    },
+    {
+        "age": 9,
+        "value": {
+            "man": 974,
+            "femal": 732
+        }
+    },
+    {
+        "age": 10,
+        "value": {
+            "man": 1056,
+            "femal": 791
+        }
+    },
+    {
+        "age": 11,
+        "value": {
+            "man": 1153,
+            "femal": 864
+        }
+    },
+    {
+        "age": 12,
+        "value": {
+            "man": 1277,
+            "femal": 965
+        }
+    }
+]

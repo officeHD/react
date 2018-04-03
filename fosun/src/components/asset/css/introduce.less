@@ -1,0 +1,470 @@
+@import "./zlib.v3.less";
+.documents {
+    .definition;
+
+    p {
+        font-size: 24px;
+        color: #999;
+        margin-top: 20px;
+    }
+
+    li {
+        border-bottom: @border;
+        font-size: 32px;
+        padding: 20px 0;
+
+        a {
+            color: @ms-red;
+        }
+    }
+}
+
+.footer {
+    height: 100px;
+    text-align: center;
+    color: #000;
+    background-color: #fff;
+    margin: 15px 0;
+    margin-bottom: 120px;
+    svg {
+        vertical-align: middle;
+        margin: 0 20px;
+    }
+    ul {
+        height: 100px;
+        padding: 10px 0;
+    }
+    li {
+        float: left;
+        width: 33%;
+
+
+        border-right: 1px solid #ccc;
+        &:last-child {
+            border: none;
+        }
+        svg {
+            color: @ms-red;
+        }
+    }
+}
+
+.definition {
+    .blank;
+
+    p {
+        line-height: 1.5;
+        height: 210px;
+        overflow: hidden;
+
+        &.all {
+            height: auto;
+        }
+    }
+}
+
+.detail {
+    font-size: 28px;
+    background-color: #fff;
+    padding: 20px 10px;
+    margin-bottom: 20px;
+
+    p {
+        height: 61px;
+        overflow: hidden;
+        .detail_title {
+            display: block;
+            border-bottom: 1px solid #ccc;
+            height: 60px;
+            padding: 0 10px;
+            line-height: 60px;
+        }
+        .more_info {
+            display: inline-block;
+            width: 100%;
+            background-color: #f6f6f6;
+            color: #9b9b9b;
+            padding: 10px 20px;
+            box-sizing: border-box;
+        }
+        &.all {
+            height: auto;
+        }
+    }
+}
+
+.table {
+    background-color: #fff;
+    padding: 30px 0;
+    width: 100%;
+    margin-bottom: 10px;
+    table {
+        width: 95%;
+        margin: 0 auto;
+        border-collapse: collapse;
+        border: 1px solid #fff;
+
+        overflow: hidden;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        thead {
+            border-radius: 10px;
+            background-color: #FFBD3A;
+
+
+            tr {
+                th {
+                    padding: 10px 0;
+                }
+                &:last-child {
+                    background-color: #F39801;
+                    color: white;
+                    th {
+                        font-weight: 500;
+                        border-right: 1px solid #fff;
+                    }
+                }
+            }
+        }
+        tbody {
+            text-align: center;
+            background-color: #FBF7EC;
+            td {
+                padding: 20px 0;
+                border-right: 1px solid #fff;
+            }
+        }
+    }
+}
+
+.payment {
+    .blank;
+
+    li {
+        .clearfix;
+        margin-bottom: 20px;
+        position: relative;
+
+        &>div {
+            float: left;
+            margin-left: 80px;
+            font-size: 40px;
+            vertical-align: middle;
+        }
+    }
+
+    .num {
+        position: absolute;
+        top: 5px;
+        left: 0;
+        display: inline-block;
+        float: left;
+        text-align: center;
+        line-height: 55px;
+        vertical-align: middle;
+
+        width: 55px;
+        height: 55px;
+        color: @ms-red;
+        border: 2PX solid @ms-red;
+        border-radius: 30px;
+    }
+
+    .small {
+        font-size: 24px;
+        color: #999;
+        line-height: 1.1;
+
+        a {
+            color: @ms-red;
+        }
+    }
+
+    button {
+        width: 100%;
+        border: 1PX solid @ms-red;
+        color: @ms-red;
+        font-size: 42px;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 15px;
+        margin: 10px 0;
+
+        a {
+            display: inline-block;
+            color: @ms-red;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+
+.blank {
+    font-size: 28px;
+    background-color: #fff;
+    border-top: @border;
+    border-bottom: @border;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+//介绍页头部图片
+.top_img {
+    font-size: 28px; // margin-top: 90px;
+    .block;
+    .w100;
+}
+
+.bottom {
+
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    span {
+        display: none;
+    }
+    button {
+        color: #fff;
+        text-align: center;
+        font-size: 32px;
+        line-height: 100px;
+        display: block;
+        width: 33.3%;
+        height: 100%;
+        background-color: @ms-red;
+        color: #fff;
+        float: left;
+        border: none;
+        &.white {
+            background-color: #fff;
+            color: @ms-red;
+        }
+        &.orange {
+            background-color: #F39801;
+        }
+        &.default {
+            background-color: gray;
+            pointer-events: none;
+        }
+    }
+}
+
+//介绍页的悬浮文字
+.words {
+    width: 100%;
+    height: 100px;
+    line-height: 50px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    text-align: center;
+    position: relative;
+    top: -100px;
+    margin-bottom: -90px;
+    font-size: 32px;
+    p {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+//介绍页产品方案
+.product_plan {
+    font-size: 28px;
+    .w100;
+    .t-c;
+    border-collapse: collapse;
+
+    thead {
+        background-color: @orange;
+        color: #fff;
+
+        th {
+            font-weight: 500;
+            padding: 20px 0;
+        }
+    }
+
+    tbody {
+        background-color: #fff;
+
+        td {
+            border-bottom: @border;
+            padding: 10px 0;
+        }
+    }
+}
+
+.show_controller {
+    display: inline-block;
+    height: 60px;
+    float: right;
+    text-align: center;
+    font-size: 24px;
+    color: #999;
+    .show_tip {
+        color: #DA251E;
+    }
+    svg {
+        width: 24px;
+        margin-left: 15px;
+        vertical-align: middle;
+        color: #999;
+    }
+}
+
+.sub_title {
+    color: @ms-red;
+    text-align: center;
+    font-size: 32px;
+    background-color: #fff;
+    padding: 20px 0;
+    span {
+        width: 100px;
+        display: inline-block;
+        height: 2px;
+        background-color: @ms-red;
+        margin-right: -15px;
+        margin-bottom: 10px;
+        &.right {
+            margin-left: -15px;
+            margin-righ: 0;
+        }
+    }
+    p {
+        display: inline-block;
+        border: 2px solid @ms-red;
+        border-radius: 50px;
+        padding: 0 30px;
+        height: 50px;
+        line-height: 50px;
+        width: auto;
+    }
+}
+
+.tab_controller {
+    width: 100%;
+    height: 100px;
+    background-color: #fff;
+    border: @border;
+
+    li {
+        float: left;
+        width: 50%;
+        line-height: 100px;
+        text-align: center;
+        font-size: 32px;
+    }
+
+    .selected {
+        color: @ms-red;
+        border-bottom: 3PX solid @ms-red;
+        height: 97px;
+    }
+}
+
+.formBox {
+    position: fixed;
+
+    max-height: 70%;
+    width: 100%;
+    bottom: 0;
+    padding-bottom: 100px;
+    background-color: #ddd;
+    z-index: 100;
+    ul {
+        overflow: auto;
+        height: 100%;
+        box-sizing: border-box;
+    }
+}
+
+.form {
+    background-color: #fff;
+    border-top: @border;
+    padding: 20px 0;
+    .form_title{
+        font-size: 36px;
+    }
+    .initindex {
+        z-index: 999;
+    }
+
+    li {
+
+        .one-height(90px);
+        padding: 0 20px;
+        label {
+            .inline;
+            width: 160px;
+        }
+
+        input {
+            border: 0;
+            width: 4rem;
+        }
+        &.tip {
+            height: auto;
+        }
+    }
+    .ul_tip {
+        width: 100%;
+        padding-left: 160px;
+        box-sizing: border-box;
+
+        li {
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            height: 40px;
+            line-height: 40px;
+
+            span {
+                display: inline-block;
+                height: 100%;
+                line-height: 40px;
+                &:last-child {
+                    float: right;
+                    color: @ms-red;
+                }
+            }
+        }
+    }
+    .radio {
+        display: inline-block; // width: 60px;
+        height: 60px;
+        border: 1px solid #ccc;
+        vertical-align: middle;
+        border-radius: 10px;
+        text-align: center;
+        line-height: 60px;
+        margin-right: 15px;
+        padding: 0 20px;
+
+        &.checked {
+            color: @ms-red;
+            border-color: @ms-red;
+        }
+    }
+}
+
+.mask {
+    background-color: rgba(0, 0, 0, 0.85);
+    top: 0;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    display: none;
+    &.active {
+        opacity: 1;
+        display: block;
+    }
+}
