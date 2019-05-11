@@ -1,0 +1,155 @@
+@import "./zlib.v2.less";
+@import "./init.less";
+//介绍页头部图片
+.top_img {
+    font-size: 28px;
+    .block;
+    .w100;
+}
+
+//介绍页的悬浮文字
+.words {
+    width: 100%;
+    height: 90px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    text-align: center;
+    position: relative;
+    top: -90px;
+    margin-bottom: -90px;
+    font-size: 32px;
+    line-height: 1.1;
+    padding: 10px 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    p {
+        width: 100%;
+        text-align: center;
+    }
+    span {
+        font-size: 24px;
+    }
+}
+.totalMoney{
+    font-size: 34px;
+    background-color: #fff;
+    height: 80px;
+    line-height: 80px;
+    padding-left: 20px;
+    color: #DB251F;
+}
+.titlePlan{
+    height: 80px;
+    margin-top: 20px;
+    background-color: #fff;
+    line-height: 80px;
+    padding-left: 20px;
+    border-bottom: 1Px solid #ccc;
+    img{
+        width: 26px;
+        height: 30px;
+        vertical-align: middle;
+        margin-right: 10px;
+    }
+}
+.plan_list {
+    height: 80px;
+    overflow: hidden;
+    border-bottom: 1Px solid #ccc;
+    .plan_title{
+        text-align: left;
+        height: 80px;
+        padding: 0 20px;
+        line-height: 80px;
+        background-color: #fff;
+        font-size: 30px;
+        color: #000;
+    }
+}
+.plan_content{
+    background-color: #fff;
+    padding-bottom: 20px;
+}
+.claim_center{
+    text-align: center;
+    .claim{
+        width:80%;
+        margin:  0 auto;
+    }
+}
+
+.plan_box{
+   
+    width: 92%;
+    margin:20px auto;
+    border: 1Px solid #D73952;
+    border-radius: 5px;
+    height: 210px;
+    .left_box{
+        background:#db6d98; /* 一些不支持背景渐变的浏览器 */ /* Safari 5.1 - 6.0 */ /* Opera 11.1 - 12.0 */ /* Firefox 3.6 - 15 */
+        background: -webkit-gradient(linear, left top, left bottom, from(#db6d98), to(#ec6975));
+        background: linear-gradient(#db6d98, #ec6975); /* 标准的语法 */
+         
+        width: 220px;
+        height:210px;
+        line-height: 210px;
+        text-align: center;
+        position: relative;
+        float: left;
+        .angle{
+            position: absolute;
+            right: -40px;
+            top: 77.5px;
+            display: inline-block;
+            border: 25px solid transparent;
+            border-left: 25px solid #E36B86;
+            width: 0;
+            height: 0px;
+        }
+        img{
+            width: 100px;
+            vertical-align: middle
+        }
+    }
+    .plan_txt{
+        padding-left: 240px;
+        padding-right:10px;
+        h2{
+            font-size: 32px;
+            font-weight: 500;
+            color: #000;
+         
+            height: 80px;
+            line-height: 80px;
+            overflow: hidden;
+            text-overflow:ellipsis;
+white-space: nowrap;
+        }
+        p{
+            font-size: 28px;
+            line-height: 1.5;
+            height: 130px;
+            overflow: hidden;
+            text-overflow:ellipsis;
+ 
+        }
+    }
+}
+.bgc{
+    background-color: #C2E2F9;
+    padding-bottom: 40px;
+}
+.detailp{
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    background-color: #fff;
+    padding: 10px 0;
+    p{
+        padding:2px 40px;
+        &.indentp{
+            text-indent: 2em;
+        }
+    }
+}

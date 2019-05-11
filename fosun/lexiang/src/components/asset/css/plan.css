@@ -1,0 +1,242 @@
+/**
+ * 文件：预定义 样式less 
+ * 作者：无名小强
+ * 版本：v0.2
+ * 版权：民盛集团
+ * 日期：2016-2-26
+**/
+/*CSS简写*/
+/*颜色*/
+/*清除浮动*/
+/*清除浮动占位符*/
+/*单行文字垂直居中*/
+/*宽和高*/
+/*正方形*/
+/*圆*/
+/*矩形圆角*/
+/*下方阴影*/
+/*箭头向下*/
+/*箭头向上*/
+/*箭头向左*/
+/*箭头向右*/
+/*倾斜*/
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+input,
+p,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+body {
+  color: #333;
+  font-size: 28px;
+  background-color: #f2f2f2;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+img {
+  border: 0;
+  width: 100%;
+}
+ol,
+ul {
+  list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+}
+input,
+button,
+select,
+textarea {
+  outline: none;
+}
+textarea {
+  resize: none;
+}
+p {
+  text-align: justify;
+  text-justify: distribute;
+}
+a {
+  color: #333;
+  text-decoration: none;
+}
+a:hover {
+  color: #f60;
+  text-decoration: none;
+}
+:global(.hide) {
+  display: none;
+}
+.top_img {
+  font-size: 28px;
+  display: block;
+  width: 100%;
+}
+.words {
+  width: 100%;
+  height: 90px;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  text-align: center;
+  position: relative;
+  top: -90px;
+  margin-bottom: -90px;
+  font-size: 32px;
+  line-height: 1.1;
+  padding: 10px 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.words p {
+  width: 100%;
+  text-align: center;
+}
+.words span {
+  font-size: 24px;
+}
+.totalMoney {
+  font-size: 34px;
+  background-color: #fff;
+  height: 80px;
+  line-height: 80px;
+  padding-left: 20px;
+  color: #DB251F;
+}
+.titlePlan {
+  height: 80px;
+  margin-top: 20px;
+  background-color: #fff;
+  line-height: 80px;
+  padding-left: 20px;
+  border-bottom: 1Px solid #ccc;
+}
+.titlePlan img {
+  width: 26px;
+  height: 30px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.plan_list {
+  height: 80px;
+  overflow: hidden;
+  border-bottom: 1Px solid #ccc;
+}
+.plan_list .plan_title {
+  text-align: left;
+  height: 80px;
+  padding: 0 20px;
+  line-height: 80px;
+  background-color: #fff;
+  font-size: 30px;
+  color: #000;
+}
+.plan_content {
+  background-color: #fff;
+  padding-bottom: 20px;
+}
+.claim_center {
+  text-align: center;
+}
+.claim_center .claim {
+  width: 80%;
+  margin: 0 auto;
+}
+.plan_box {
+  width: 92%;
+  margin: 20px auto;
+  border: 1Px solid #D73952;
+  border-radius: 5px;
+  height: 210px;
+}
+.plan_box .left_box {
+  background: #db6d98;
+  /* 一些不支持背景渐变的浏览器 */
+  /* Safari 5.1 - 6.0 */
+  /* Opera 11.1 - 12.0 */
+  /* Firefox 3.6 - 15 */
+  background: -webkit-gradient(linear, left top, left bottom, from(#db6d98), to(#ec6975));
+  background: linear-gradient(#db6d98, #ec6975);
+  /* 标准的语法 */
+  width: 220px;
+  height: 210px;
+  line-height: 210px;
+  text-align: center;
+  position: relative;
+  float: left;
+}
+.plan_box .left_box .angle {
+  position: absolute;
+  right: -40px;
+  top: 77.5px;
+  display: inline-block;
+  border: 25px solid transparent;
+  border-left: 25px solid #E36B86;
+  width: 0;
+  height: 0px;
+}
+.plan_box .left_box img {
+  width: 100px;
+  vertical-align: middle;
+}
+.plan_box .plan_txt {
+  padding-left: 240px;
+  padding-right: 10px;
+}
+.plan_box .plan_txt h2 {
+  font-size: 32px;
+  font-weight: 500;
+  color: #000;
+  height: 80px;
+  line-height: 80px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.plan_box .plan_txt p {
+  font-size: 28px;
+  line-height: 1.5;
+  height: 130px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.bgc {
+  background-color: #C2E2F9;
+  padding-bottom: 40px;
+}
+.detailp {
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 10px;
+  border: 1px solid #fff;
+  background-color: #fff;
+  padding: 10px 0;
+}
+.detailp p {
+  padding: 2px 40px;
+}
+.detailp p.indentp {
+  text-indent: 2em;
+}
