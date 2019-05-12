@@ -4,7 +4,10 @@ import { observer, inject } from 'mobx-react';
 import InputBox from '../../components/InputBox'
 import RadioSelect from '../../components/RadioSelect';
 import SubTitle from '../../components/SubTitle'
+import Renewal from './Renewal'
 import style from './index.less'
+
+
 
 @inject('store')
 @observer
@@ -41,9 +44,13 @@ export default class Insurant extends Component {
         <BlankLi title="有无社保">
           {insurance.socialSecFlag=="Y"?"有社保":"无社保"}
         </BlankLi>
+       
         <BlankLi title="保额">
           {insurance.amnt}万元
         </BlankLi> 
+        {
+          insurance.payment=="趸交"?"":<Renewal/>
+        } 
       </div> 
     )
   };

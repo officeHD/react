@@ -3,17 +3,17 @@ import BlankLi from '../../components/BlankLi';
 import { observer, inject } from 'mobx-react';
 import InputBox from '../../components/InputBox'
 import RadioSelect from '../../components/RadioSelect';
+import OccupationSelect from '../../components/OccupationSelect';
 
+import {validNum,removeAllSpace} from '../../api/util'
 // import ClickDiv from './ClickDiv'
-import { DatePicker } from 'antd-mobile';
+import { DatePicker, Picker, Toast } from 'antd-mobile';
 import moment from 'moment';
 import SubTitle from '../../components/SubTitle'
 // import RelationTypeContainer from '../containers/RelationTypeContainer'
 // import PickerPlaceContainer from '../containers/PickerPlaceContainer'
-// import data from '../reducers/data.json'
 import style from './index.less'
-
-
+import { address } from "../../store/address"
 const CustomChildren = ({ extra, onClick, children }) => (
     <span className={style.pickDate} onClick={onClick}  >{extra}</span>
 );
@@ -33,21 +33,10 @@ export default class Insurant extends Component {
         })
     }
     render() {
-        const { insurant, userType, store } = this.props;
-        let insurance = store.insurance;
-        console.log()
-        const { insuredsData, onscrollToAnchor,
-            onChangeInsurantName, onChangeInsurantPhone, showInsurantCertiTypeBox,
-            onChangeInsurantNo, onChangeInsurantBirthday, onChangeInsurantGender,
-            onChangeInsurantEmail, onChangeInsurantAddress, onChangeInvalidDate,
-            onChangeOccupationShow, onChangeInsurantZipCode, onChangeInsurantLocation,
-            occupation, onChangeInsuInCome, onChangeInsurantHeight, onChangeInsurantWeight } = this.props;
-        // let idtype = data.CertiType.filter((item) => item.value == insuredsData.insuIdType);
-
+        const { insurant, userType, store: { insurance, appUi } } = this.props;
         return (
-
             <div >
-                <SubTitle title={`${userType}信息`} show={this.state.show} icon="insured" />
+                <SubTitle title={`${userType}信息`} toggleShow={this.toggleShow} show={this.state.show} icon="insured" />
                 {/* <RelationTypeContainer /> */}
                 <div className={this.state.show ? "coat_ul" : "hide"}>
 
@@ -69,8 +58,9 @@ export default class Insurant extends Component {
                             />
                         </BlankLi>
                         <BlankLi title={`${userType}电话`}>
-                            <InputBox val={insurant.phone} maxLength="11"
-                                onChangeVal={val => { insurant.setUserData({ phone: val }) }} />
+                            <InputBox val={ validNum(insurant.phone,[3,4,4]," ")} maxLength="13" className="account"
+                                
+                                onChangeVal={val => { insurant.setUserData({ phone: removeAllSpace(val) }) }} />
                         </BlankLi>
                         {/* <BlankLi item="证件类型">
                                 <ClickDiv val={idtype[0].label} onClickHandler={e => console.log("不可选择")} />
@@ -78,9 +68,10 @@ export default class Insurant extends Component {
                             </BlankLi> */
                         }
                         <BlankLi title="身份证号">
-                            <InputBox className="account" val={insurant.idNum} maxLength="20"
-                                onBlurChange={val => { insurant.idNumCheck(val) }}
-                                onChangeVal={val => { insurant.setUserData({ idNum: val }) }} />
+                            <InputBox className="account" maxLength="20"
+                            val={validNum(insurant.idNum,[6,8,4]," ")} 
+                                onBlurChange={val => { insurant.idNumCheck(removeAllSpace(val)) }}
+                                onChangeVal={val => { insurant.setUserData({ idNum: removeAllSpace(val) }) }} />
                         </BlankLi>
                         {/* <DatePicker
                                 mode="date"
@@ -130,26 +121,30 @@ export default class Insurant extends Component {
                                 </div> : null
 
                         }
-
-
                         {/* <PickerPlaceContainer title="被保人地址"
                                 placeVal={[insuredsData.insuProvince, insuredsData.insuCity, insuredsData.insuCounty]}
                                 checkPlace={onChangeInsurantAddress}
                             /> */}
+                        <Picker
+                            title="选择地区"
+                            extra="请选择"
+                            data={address}
+                            value={[insurant.province, insurant.city, insurant.country]}
+                            onOk={val => { insurant.setUserData({ province: val[0], city: val[1], country: val[2] }) }}
+                        >
+                            <BlankLi title="所在地区"></BlankLi>
+                        </Picker>
                         <BlankLi title="详细地址">
                             <InputBox val={insurant.permanentAddress} tip="请输入详细地址"
                                 onChangeVal={val => { insurant.setUserData({ permanentAddress: val }) }} />
                         </BlankLi>
                     </div>
-
-
                     {/* {
                             insuredsData.insuSocialSecFlag === "Y" ?
                             <BlankLi item="社保所在地">
                                 {insuredsData.socialInsuProvinceName} ，{insuredsData.socialInsuCityName}
                             </BlankLi> : null
                         }
-                        
                         <BlankLi item="年收入">
                             <input type="text" id="333" style={{ width: "80px" }} placeholder="请输入" value={insuredsData.insuInCome} onChange={e => onChangeInsuInCome((e.target.value).trim())} maxLength={5} /> 万
                         </BlankLi> */}
@@ -165,15 +160,18 @@ export default class Insurant extends Component {
                                     onChangeVal={val => { insurant.setUserData({ weight: val }) }}
                                 />
                             </BlankLi>
-                            <BlankLi title="被保人职业">
-                                {/* <ClickDiv val={occupation.occupationCategoryName} onClickHandler={onChangeOccupationShow} /> */}
+                            <BlankLi title="被保人职业" onClick={e => appUi.changeShow(!appUi.showOccuPation)}>
+                                {insurant.occupationName?insurant.occupationName:"请选择"}
                             </BlankLi>
-
                         </div> : null
                     }
 
                 </div>
+                {
 
+                    appUi.showOccuPation ? <OccupationSelect setcode={val=>insurant.setJob(val)} code={insurant.occupationCode} parent={insurant.occupationParent}
+                        changeShow={e => appUi.changeShow(!appUi.showOccuPation)} /> : null
+                }
             </div>
 
         )

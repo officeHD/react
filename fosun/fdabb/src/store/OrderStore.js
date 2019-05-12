@@ -5,6 +5,13 @@ export default class OrderStore {
 
   @observable  orderId="";
   @observable  orderNo="";
+  @observable  payBankCode="";
+  @observable  payBankNum="";
+  @observable  payType="00";
+
+  
+
+  
 
  
   // 删
@@ -12,6 +19,11 @@ export default class OrderStore {
   getDetail(id) {
      this.orderId=id;
   }
+  @action
+  setData(obj) {
+    Object.assign(this, obj);
+  }
+  
 
   @computed get isAllSelected() {
     const allTrue = this.foodList.every(v => v.isSelected === true);

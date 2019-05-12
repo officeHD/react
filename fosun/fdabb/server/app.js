@@ -57,21 +57,12 @@ router.get('*', async (ctx, next) => {
 				<meta charset="UTF-8">
 				<title>mobx-demo</title>
 				<style>
-					*{
-					margin: 0;
-					padding: 0;
-					}
-					html,
-					body {
-					-webkit-tap-highlight-color: transparent;
-					height: 100%;
-					touch-action: none;
-					}
+					 
                 </style>
               
 				</head>
 				<body>
-				<div id="app" style="height: 100%;"></div>
+				<div id="app"  ></div>
 				<script src="/dist/bundle.js"></script>
 				</body>
 				</html>`

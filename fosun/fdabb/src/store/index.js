@@ -3,6 +3,7 @@ import OrderStore from './OrderStore';
 import InsuredStore from './InsuredStore';
 import InsuranceStore from './InsuranceStore';
 import BnfsStore from './bnfsStore';
+import AppUiStore from './AppUiStore';
 
 
 import { insureData} from './data';
@@ -24,8 +25,9 @@ class RootStore {
     this.holder = new InsuredStore(this); 
     this.insurance = new InsuranceStore(this); 
     this.benefit = new BnfsStore(this); 
+    this.appUi = new AppUiStore(this); 
     
-
+    
     let origin=getDataFromUrl("type"); //访问的环境 
     let workNum=getDataFromUrl("workNum"); 
     let id=getDataFromUrl("id"); 

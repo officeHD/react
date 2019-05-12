@@ -3,6 +3,8 @@ import {
     action,
     computed
 } from 'mobx';
+import { Toast } from 'antd-mobile';
+
 import {
     GetAge,
     checkData, IdentityCodeValid
@@ -10,6 +12,8 @@ import {
 
 // 订单store
 export default class OrderStore {
+    @observable relationsWithCustomer = '04'; //被保人与投保人关系
+
     @observable name = ""; //姓名
     @observable phone = ""; //手机号
     @observable idType = "0"; //证件类型
@@ -18,6 +22,10 @@ export default class OrderStore {
     @observable birthDate = ""; //生日
     @observable sex = 0; //性别
     @observable occupationCode = ''; //职业
+    @observable occupationName = ''; //职业
+    @observable occupationParent = ''; //职业
+    
+
     @observable province = ""; //省编号
     @observable city = ""; //所在城市
     @observable county = ""; //县编号
@@ -33,7 +41,6 @@ export default class OrderStore {
     @observable validDate = ''; //证件有效起期
     @observable validDateEnd = ""; //证件有效止期
     @observable telephone = ''; //固话
-    @observable relationsWithCustomer = ''; //被保人与投保人关系
     @observable idFrontImg = ''; //证件照正面
     @observable idBackImg = ''; // 证件照反面
     @observable socialSecFlag = 'Y'; //投保人是否有社保标志 0：非社保1：参加社保
@@ -57,14 +64,26 @@ export default class OrderStore {
 
         }
     }
-    @action 
-    idNumCheck(val) { 
+    @action
+    idNumCheck(val) {
         let that = this;
         if (this.idType == "0") {
             if (IdentityCodeValid(val)) {
                 that.birthDate = val.substr(6, 4) + "-" + val.substr(10, 2) + "-" + val.substr(12, 2);
             }
         }
+    }
+    @action
+    setJob(val) {
+        if (val.class !== "1" && val.class !== "2" && val.class !== "3" && val.class !== "4") {
+            Toast.info("该行业不可投保", 3);
+            return false;
+        }
+        this.occupationCode = val.value;
+        this.occupationName = val.name;
+        this.occupationParent = val.parent;
+        
+        this.rootStore.appUi.changeShow(false)
     }
     @computed get age() {
         let age = GetAge(this.birthDate);

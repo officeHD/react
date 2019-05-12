@@ -3,9 +3,10 @@ import BlankLi from '../../components/BlankLi';
 import { observer, inject } from 'mobx-react';
 import InputBox from '../../components/InputBox'
 import RadioSelect from '../../components/RadioSelect';
+import {validNum,removeAllSpace} from '../../api/util'
 
 // import ClickDiv from './ClickDiv'
-import { DatePicker,Button } from 'antd-mobile';
+import { DatePicker, Button, WingBlank } from 'antd-mobile';
 import moment from 'moment';
 import SubTitle from '../../components/SubTitle'
 // import RelationTypeContainer from '../containers/RelationTypeContainer'
@@ -78,21 +79,23 @@ export default class Insurant extends Component {
                                             }} onBlurChange={val => benefit.searchName(val)} />
                                         </BlankLi>
                                         <BlankLi title={`手机号`}>
-                                            <InputBox val={item.phone} onChangeVal={val => {
-                                                benefit.setData({
-                                                    index: index,
-                                                    dataType: "phone",
-                                                    value: val,
-                                                })
-                                            }} maxLength="11" />
+                                        
+                                            <InputBox val={validNum(item.phone,[3,4,4]," ")} className="account"
+                                                onChangeVal={val => {
+                                                    benefit.setData({
+                                                        index: index,
+                                                        dataType: "phone",
+                                                        value: removeAllSpace(val),
+                                                    })
+                                                }} maxLength="13" />
                                         </BlankLi>
                                         <BlankLi title="身份证号">
                                             <InputBox className="account"
-                                                val={item.idNum} onChangeVal={val => {
+                                                val={validNum(item.idNum,[6,8,4]," ")} onChangeVal={val => {
                                                     benefit.setData({
                                                         index: index,
                                                         dataType: "idNum",
-                                                        value: val
+                                                        value:  removeAllSpace(val)
                                                     })
                                                 }} maxLength="20" />
                                         </BlankLi>
@@ -133,12 +136,15 @@ export default class Insurant extends Component {
                                                     })
                                                 }} maxLength="20" />
                                         </BlankLi>
-                                        
+
                                     </div>
                                 })
                             }
-                            {benefitList.length<3?<Button onClick={e=>{benefit.addBenefit()}}>添加受益人</Button>:null}
-                            
+                            <WingBlank >
+                                {benefitList.length < 3 ?
+                                    <Button onClick={e => { benefit.addBenefit() }}>添加受益人</Button> : null
+                                }
+                            </WingBlank>
                         </div>
 
 

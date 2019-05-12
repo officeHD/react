@@ -3,13 +3,12 @@ import {
   action,
   computed
 } from 'mobx';
-import {
-  Toast
-} from 'antd-mobile';
+import { Toast } from 'antd-mobile';
 import {
   getEditDate,
   getprem,
   insert_order
+  
 } from '../api/index';
 // 员工信息store
 export default class InsuranceStore {
@@ -37,13 +36,19 @@ export default class InsuranceStore {
   constructor(rootStore) {
     this.rootStore = rootStore
   }
-  //初始化值
+  /**
+   * 初始化值
+   * @param {*} obj 
+   */
   @action
   initData(obj) {
     Object.assign(this, obj);
   }
 
 
+  /**
+   * 获取保费
+   */
   @action
   getPrem() {
     Toast.loading("", 0, null, true)
@@ -60,7 +65,9 @@ export default class InsuranceStore {
       }
     })
   }
-
+  /**
+   * 试算下一步
+   */
   @action
   computer() {
     let that = this;
@@ -71,16 +78,46 @@ export default class InsuranceStore {
         that.prem = res.prem;
         that.totalPrem = res.totalPrem;
         that.productList = res.productList;
-        window.location.href="#/insured"
+        window.location.href = "#/health"
       } else {
         Toast.info(res.message, 1)
       }
     })
   }
+  /**
+   * 投保
+   */
   @action
   insertOrder() {
-    insert_order(this.rootStore, res => {
+    insert_order("insertOrder",this.rootStore, res => {
       console.log(res);
+      if (res.result.toString() === "1") {
+        this.rootStore.order.setData({
+          orderId: res.orderId,
+          orderNo: res.orderNo
+        })
+
+        console.log(this.rootStore)
+        window.location.href = "#/insuredDetail"
+      } 
+    })
+  }
+  /**
+   * 核保
+   */
+  @action
+  underwriting() {
+    insert_order("underwriting",this.rootStore, res => {
+      console.log(res);
+      if (res.result.toString() === "1") {
+        this.rootStore.order.setData({
+          orderId: res.orderId,
+          orderNo: res.orderNo
+        })
+
+        console.log(this.rootStore)
+        window.location.href = "#/insuredDetail"
+      } 
     })
   }
 

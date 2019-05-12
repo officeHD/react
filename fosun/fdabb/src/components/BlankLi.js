@@ -1,10 +1,10 @@
 import React from 'react';
 import style from './asset/css/index.less'
 
-const BlankLi = ({children, title}) => (
-  <div className={style.blank_li}>
+const BlankLi = ({children, title,extra,onClick=null}) => (
+  <div className={style.blank_li} onClick={onClick}>
     <label className={style.left}>{title}</label>
-    <div className={style.right}>{children}</div>
+    <div className={style.right}>{extra?extra:children}</div>
   </div>
 )
 

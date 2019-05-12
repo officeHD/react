@@ -24,21 +24,20 @@ export default class AddTodo extends Component {
         return (
             <div className="pd150">
                 <NavBar title={insurance.productName} />
+
+
                 <Insurant insurant={insurant} userType="被保人" />
                 {
                     insurant.relationsWithCustomer == "04" ? null : <Insurant insurant={holder} userType="投保人" />
                 }
-
+                <InsuPlan />
                 {/* <Insurant insurant={holder} userType="受益人 " /> */}
-                <InsuPlan  />
                 <Beneficiary />
-                {/* 
-                
-               
+                {/*  
                 <Attention />
                 <Footer />  */}
                 {/* <BottomBar staff={store.staff} /> */}
-                <ul className={style.fixedBottom} onClick={e => insurance.computer}>
+                <ul className={style.fixedBottom} onClick={e => insurance.insertOrder()}>
                     <li> 下一步 </li>
                 </ul>
             </div>
